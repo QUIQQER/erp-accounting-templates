@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locales>
+
+    <groups name="quiqqer/invoice-accounting-template" datatype="php,js">
+        <locale name="package.title">
+            <de><![CDATA[QUIQQER - Rechnungssystem - Rechnungstemplate]]></de>
+            <en><![CDATA[QUIQQER - Invoice - Accounting template]]></en>
+        </locale>
+    </groups>
+
+    <groups name="quiqqer/invoice-accounting-template" datatype="php">
+        <locale name="header" html="true">
+            <de><![CDATA[&nbsp;]]></de>
+            <en><![CDATA[&nbsp;]]></en>
+        </locale>
+
+        <locale name="body.id">
+            <de><![CDATA[Beleg-Nummer]]></de>
+            <en><![CDATA[Document number]]></en>
+        </locale>
+        <locale name="body.date">
+            <de><![CDATA[Datum]]></de>
+            <en><![CDATA[Date]]></en>
+        </locale>
+        <locale name="body.customerId">
+            <de><![CDATA[Kunden-Nr.]]></de>
+            <en><![CDATA[Customer No.]]></en>
+        </locale>
+        <locale name="body.editor">
+            <de><![CDATA[Bearbeiter]]></de>
+            <en><![CDATA[Editor]]></en>
+        </locale>
+
+        <locale name="footer.box.1" html="true">
+            <de><![CDATA[&nbsp;]]></de>
+            <en><![CDATA[&nbsp;]]></en>
+        </locale>
+        <locale name="footer.box.2" html="true">
+            <de><![CDATA[&nbsp;]]></de>
+            <en><![CDATA[&nbsp;]]></en>
+        </locale>
+        <locale name="footer.box.3" html="true">
+            <de><![CDATA[&nbsp;]]></de>
+            <en><![CDATA[&nbsp;]]></en>
+        </locale>
+        <locale name="footer.box.4" html="true">
+            <de><![CDATA[&nbsp;]]></de>
+            <en><![CDATA[&nbsp;]]></en>
+        </locale>
+    </groups>
+
+</locales>
