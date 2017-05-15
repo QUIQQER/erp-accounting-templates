@@ -11,7 +11,9 @@
     {if $Customer}
     {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
-    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}:
+    {if $Editor}
+    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+    {/if}
 </div>
 
 <div class="invoice-articles">
