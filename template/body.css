@@ -22,6 +22,7 @@
 
 .invoice-additional {
     clear: both;
+    float: left;
     margin-top: 40px;
 }
 
@@ -29,6 +30,9 @@
     border-bottom: 1px solid #DDDDDD;
     margin-top: 20px;
     width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 10px;
 }
 
 .articles-header {
@@ -37,6 +41,7 @@
 
 /** header
  ========================================== */
+
 .articles-article-header {
     color: #999999;
     font-size: 12px;
@@ -46,6 +51,7 @@
 .articles-article-header-pos,
 .articles-article-header-quantity {
     text-align: center;
+    width: 100px;
 }
 
 .articles-article-header-information {
@@ -72,6 +78,7 @@
 }
 
 .articles-article-information-description {
+    font-size: 12px;
     text-align: left;
     vertical-align: top;
 }
@@ -85,6 +92,10 @@
     /*color: #e91d2c;*/
     text-align: right;
     vertical-align: top;
+}
+
+.articles-article p {
+    margin: 0;
 }
 
 /** sum
