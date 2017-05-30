@@ -47,6 +47,19 @@
             <de><![CDATA[&nbsp;]]></de>
             <en><![CDATA[&nbsp;]]></en>
         </locale>
+
+        <locale name="title.invoice">
+            <de><![CDATA[Rechnung]]></de>
+            <en><![CDATA[Invoice]]></en>
+        </locale>
+        <locale name="title.creditNote">
+            <de><![CDATA[Gutschrift]]></de>
+            <en><![CDATA[Self-billing]]></en>
+        </locale>
+        <locale name="title.canceled">
+            <de><![CDATA[Stornorechnung]]></de>
+            <en><![CDATA[Cancellation invoice]]></en>
+        </locale>
     </groups>
 
 </locales>

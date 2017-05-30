@@ -16,6 +16,10 @@
     {/if}
 </div>
 
+<h1 class="invoice-header">
+    {locale group="quiqqer/invoice-accounting-template" var="title.invoice"}
+</h1>
+
 <div class="invoice-articles">
     {$ArticleList->toHTML()}
 </div>
