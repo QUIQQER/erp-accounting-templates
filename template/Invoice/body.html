@@ -25,5 +25,16 @@
 </div>
 
 <div class="invoice-additional">
-    {$this->getAttribute('additional_invoice_text')}
+    {if empty($transaction)}
+    {locale group="quiqqer/invoice" var="additional.invoice.text.timeForPayment"}: {$timeForPayment}
+    {else}
+    {$transaction}
+    {/if}
+
+    <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
+    <br/>{$this->getAttribute('additional_invoice_text')}
+
+    {if $Payment->getInvoiceInformationText($this) !== ''}
+    <br/>{$Payment->getInvoiceInformationText($this)}
+    {/if}
 </div>
