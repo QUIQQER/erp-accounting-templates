@@ -1,0 +1,50 @@
+<div class="contract-customer">
+    {if $Address}
+    {$Address->getDisplay()}
+    {/if}
+</div>
+
+
+<div class="contract-data">
+    {if $Customer}
+    {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+    {/if}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.id"}: {$this->getId()}<br/>
+    {if $Editor}
+    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+    {/if}
+</div>
+
+<h1 class="invoice-header">
+    {locale group="quiqqer/invoice-accounting-template" var="title.contract"}
+</h1>
+
+<div class="contract-details">
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.begin"}: {$begin}<br/>
+    {if $terminationDate}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.terminationDate"}: {$terminationDate}<br/>
+    {/if}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.minDurationInterval"}: {$minDurationInterval}<br/>
+    {if $extension}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.extension"}: {$extension}<br/>
+    {/if}
+    {if $periodOfNotice}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.periodOfNotice"}: {$periodOfNotice}<br/>
+    {/if}
+    {locale group="quiqqer/invoice-accounting-template" var="contract.body.invoiceInterval"}: {$invoiceInterval}<br/>
+</div>
+
+<div class="contract-articles">
+    {$ArticleList->toHTML()}
+</div>
+
+<div class="contract-additional">
+    {if empty($transaction)}
+    {locale group="quiqqer/invoice" var="additional.invoice.text.timeForPayment"}: {$timeForPayment}
+    {else}
+    {$transaction}
+    {/if}
+
+    <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
+    <br/>{$this->getAttribute('additional_contract_text')}
+</div>
