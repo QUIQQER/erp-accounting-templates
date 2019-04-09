@@ -64,6 +64,40 @@
             <de><![CDATA[Stornorechnung]]></de>
             <en><![CDATA[Cancellation invoice]]></en>
         </locale>
+
+        <!-- Contracts -->
+        <locale name="title.contract">
+            <de><![CDATA[Vertrag]]></de>
+            <en><![CDATA[Contract]]></en>
+        </locale>
+        <locale name="contract.body.id">
+            <de><![CDATA[Vertrags-Nr.]]></de>
+            <en><![CDATA[Contract no.]]></en>
+        </locale>
+        <locale name="contract.body.begin">
+            <de><![CDATA[Beginn]]></de>
+            <en><![CDATA[Start]]></en>
+        </locale>
+        <locale name="contract.body.terminationDate">
+            <de><![CDATA[Vertragsende]]></de>
+            <en><![CDATA[End of contract]]></en>
+        </locale>
+        <locale name="contract.body.invoiceInterval">
+            <de><![CDATA[Rechnungs-Intervall]]></de>
+            <en><![CDATA[Invoicing interval]]></en>
+        </locale>
+        <locale name="contract.body.periodOfNotice">
+            <de><![CDATA[Kündigungsfrist]]></de>
+            <en><![CDATA[Period of notice]]></en>
+        </locale>
+        <locale name="contract.body.extension">
+            <de><![CDATA[Autom. Verlängerung um]]></de>
+            <en><![CDATA[Auto extension by]]></en>
+        </locale>
+        <locale name="contract.body.minDurationInterval">
+            <de><![CDATA[Mindestvertragslaufzeit]]></de>
+            <en><![CDATA[Minimum contract duration]]></en>
+        </locale>
     </groups>
 
 </locales>
