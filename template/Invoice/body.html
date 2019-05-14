@@ -14,6 +14,7 @@
     {if $Editor}
     {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
     {/if}
+    {template_event name="quiqqer::invoice-accounting-template::invoiceDataEnd" InvoiceView=$this}
 </div>
 
 <h1 class="invoice-header">
