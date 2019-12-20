@@ -98,6 +98,77 @@
             <de><![CDATA[Mindestvertragslaufzeit]]></de>
             <en><![CDATA[Minimum contract duration]]></en>
         </locale>
+
+        <!-- Offer -->
+        <locale name="title.offer">
+            <de><![CDATA[Angebot]]></de>
+            <en><![CDATA[Offer]]></en>
+        </locale>
+        <locale name="offer.body.id">
+            <de><![CDATA[Angebots-Nr.]]></de>
+            <en><![CDATA[Offer no.]]></en>
+        </locale>
+        <locale name="offer.body.date">
+            <de><![CDATA[Angebotsdatum]]></de>
+            <en><![CDATA[Offer date]]></en>
+        </locale>
+        <locale name="offer.body.editor">
+            <de><![CDATA[Ansprechpartner]]></de>
+            <en><![CDATA[Contact person]]></en>
+        </locale>
+        <locale name="offer.body.editor.phone">
+            <de><![CDATA[Telefon]]></de>
+            <en><![CDATA[Phone]]></en>
+        </locale>
+        <locale name="offer.body.editor.fax">
+            <de><![CDATA[Fax]]></de>
+            <en><![CDATA[Fax]]></en>
+        </locale>
+        <locale name="offer.body.editor.mail">
+            <de><![CDATA[E-Mail]]></de>
+            <en><![CDATA[E-Mail]]></en>
+        </locale>
+        <locale name="offer.body.begin">
+            <de><![CDATA[Beginn]]></de>
+            <en><![CDATA[Start]]></en>
+        </locale>
+        <locale name="offer.body.terminationDate">
+            <de><![CDATA[Vertragsende]]></de>
+            <en><![CDATA[End of contract]]></en>
+        </locale>
+        <locale name="offer.body.invoiceInterval">
+            <de><![CDATA[Rechnungs-Intervall]]></de>
+            <en><![CDATA[Invoicing interval]]></en>
+        </locale>
+        <locale name="offer.body.periodOfNotice">
+            <de><![CDATA[Kündigungsfrist]]></de>
+            <en><![CDATA[Period of notice]]></en>
+        </locale>
+        <locale name="offer.body.extension">
+            <de><![CDATA[Autom. Verlängerung um]]></de>
+            <en><![CDATA[Auto extension by]]></en>
+        </locale>
+        <locale name="offer.body.minDurationInterval">
+            <de><![CDATA[Mindestvertragslaufzeit]]></de>
+            <en><![CDATA[Minimum contract duration]]></en>
+        </locale>
+        <locale name="offer.body.customer.contact">
+            <de><![CDATA[Anfrage durch]]></de>
+            <en><![CDATA[Inquiry by]]></en>
+        </locale>
+        <locale name="offer.body.customer.offer_no">
+            <de><![CDATA[Anfrage-Nr.]]></de>
+            <en><![CDATA[Inquiry no.]]></en>
+        </locale>
+        <locale name="offer.body.non_binding">
+            <de><![CDATA[Freibleibendes Angebot.]]></de>
+            <en><![CDATA[Non-binding offer.]]></en>
+        </locale>
+        <locale name="offer.body.tos_hint">
+            <de><![CDATA[Es gelten unsere allgemeinen Verkaufs-, Lieferungs- und Zahlungsbedingungen. Sämtliche Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.]]></de>
+            <en><![CDATA[Our general terms of sale, delivery and payment apply. All goods remain our property until full payment has been received.]]></en>
+        </locale>
+        
     </groups>
 
 </locales>

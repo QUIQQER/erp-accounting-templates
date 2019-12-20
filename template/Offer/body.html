@@ -1,0 +1,65 @@
+<div class="offer-customer">
+    {if $Address}
+    {$Address->getDisplay()}
+    {/if}
+</div>
+
+<div class="offer-data">
+    {locale group="quiqqer/invoice-accounting-template" var="offer.body.date"}: {$offerDate}<br/>
+    {locale group="quiqqer/invoice-accounting-template" var="offer.body.id"}: {$this->getId()}<br/>
+    <br/>
+    {if $Customer}
+    {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+    {/if}
+    {if $Editor}
+        <br/>
+        {locale group="quiqqer/invoice-accounting-template" var="offer.body.editor"}: {$editorName}<br/>
+        {if !empty($editorPhone)}
+        {locale group="quiqqer/invoice-accounting-template" var="offer.body.editor.phone"}: {$editorPhone}<br/>
+        {/if}
+        {if !empty($editorFax)}
+        {locale group="quiqqer/invoice-accounting-template" var="offer.body.editor.fax"}: {$editorFax}<br/>
+        {/if}
+        {if !empty($editorMail)}
+        {locale group="quiqqer/invoice-accounting-template" var="offer.body.editor.mail"}: {$editorMail}
+        {/if}
+    {/if}
+</div>
+
+<h1 class="offer-header">
+    {locale group="quiqqer/invoice-accounting-template" var="title.offer"}
+</h1>
+
+<div class="offer-inquiry">
+    {if !empty($contactName)}
+    {locale group="quiqqer/invoice-accounting-template" var="offer.body.customer.contact"}: {$contactName}
+    {/if}
+    {if !empty($customerOfferNo)}
+    <br/>{locale group="quiqqer/invoice-accounting-template" var="offer.body.customer.offer_no"}: {$customerOfferNo}
+    {/if}
+</div>
+
+{if !empty($textTop)}
+<div class="offer-additional-top">
+    {$textTop}
+</div>
+{/if}
+
+<div class="offer-articles">
+    {$ArticleList->toHTML()}
+</div>
+
+<div class="offer-tos">
+    {locale group="quiqqer/invoice-accounting-template" var="offer.body.tos_hint"}
+</div>
+
+<div class="offer-additional">
+    {locale group="quiqqer/invoice" var="additional.invoice.text.timeForPayment"}: {$timeForPayment}<br/>
+    {locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
+
+    {if empty($binding)}
+    <p>{locale group="quiqqer/invoice-accounting-template" var="offer.body.non_binding"}</p>
+    {/if}
+
+    <br/>{$this->getAttribute('additional_offer_text')}
+</div>
