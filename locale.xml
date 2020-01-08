@@ -132,29 +132,13 @@
             <de><![CDATA[Beginn]]></de>
             <en><![CDATA[Start]]></en>
         </locale>
-        <locale name="offer.body.terminationDate">
-            <de><![CDATA[Vertragsende]]></de>
-            <en><![CDATA[End of contract]]></en>
-        </locale>
-        <locale name="offer.body.invoiceInterval">
-            <de><![CDATA[Rechnungs-Intervall]]></de>
-            <en><![CDATA[Invoicing interval]]></en>
-        </locale>
-        <locale name="offer.body.periodOfNotice">
-            <de><![CDATA[Kündigungsfrist]]></de>
-            <en><![CDATA[Period of notice]]></en>
-        </locale>
-        <locale name="offer.body.extension">
-            <de><![CDATA[Autom. Verlängerung um]]></de>
-            <en><![CDATA[Auto extension by]]></en>
-        </locale>
-        <locale name="offer.body.minDurationInterval">
-            <de><![CDATA[Mindestvertragslaufzeit]]></de>
-            <en><![CDATA[Minimum contract duration]]></en>
-        </locale>
         <locale name="offer.body.customer.contact">
             <de><![CDATA[Anfrage durch]]></de>
             <en><![CDATA[Inquiry by]]></en>
+        </locale>
+        <locale name="offer.body.customer.inquiry_date">
+            <de><![CDATA[Anfragedatum]]></de>
+            <en><![CDATA[Inquiry date]]></en>
         </locale>
         <locale name="offer.body.customer.offer_no">
             <de><![CDATA[Anfrage-Nr.]]></de>
@@ -167,6 +151,14 @@
         <locale name="offer.body.tos_hint">
             <de><![CDATA[Es gelten unsere allgemeinen Verkaufs-, Lieferungs- und Zahlungsbedingungen. Sämtliche Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.]]></de>
             <en><![CDATA[Our general terms of sale, delivery and payment apply. All goods remain our property until full payment has been received.]]></en>
+        </locale>
+        <locale name="offer.body.valid_to" html="true">
+            <de><![CDATA[Dieses Angebot ist gültig bis zum <b>[date]</b>.]]></de>
+            <en><![CDATA[This offer is valid until <b>[date]</b>.]]></en>
+        </locale>
+        <locale name="offer.body.project">
+            <de><![CDATA[Projekt: [project]]]></de>
+            <en><![CDATA[Project: [project]]]></en>
         </locale>
         
     </groups>
