@@ -24,6 +24,20 @@
         {locale group="quiqqer/invoice-accounting-template" var="offer.body.editor.mail"}: {$editorMail}
         {/if}
     {/if}
+
+    {if $useShipping}
+    <div class="offer-delivery-address">
+        <span class="offer-delivery-address-label">
+            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress"}:
+        </span><br/>
+        {if $DeliveryAddress}
+
+            {$DeliveryAddress->getDisplay()}
+        {else}
+            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress_like_invoiceAddress"}
+        {/if}
+    </div>
+    {/if}
 </div>
 
 <h1 class="offer-header">

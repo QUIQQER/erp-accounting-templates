@@ -55,6 +55,14 @@
     width: 400px;
 }
 
+.offer-delivery-address {
+    margin: 40px 0 0 0;
+}
+
+.offer-delivery-address-label {
+    font-weight: bold;
+}
+
 /** header
  ========================================== */
 

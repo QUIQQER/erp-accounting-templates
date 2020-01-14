@@ -168,6 +168,22 @@
             <de><![CDATA[Es gelten unsere allgemeinen Verkaufs-, Lieferungs- und Zahlungsbedingungen. Sämtliche Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.]]></de>
             <en><![CDATA[Our general terms of sale, delivery and payment apply. All goods remain our property until full payment has been received.]]></en>
         </locale>
+        <locale name="offer.body.valid_to" html="true">
+            <de><![CDATA[Dieses Angebot ist gültig bis zum <b>[date]</b>.]]></de>
+            <en><![CDATA[This offer is valid until <b>[date]</b>.]]></en>
+        </locale>
+        <locale name="offer.body.project">
+            <de><![CDATA[Projekt: [project]]]></de>
+            <en><![CDATA[Project: [project]]]></en>
+        </locale>
+        <locale name="body.deliveryAddress">
+            <de><![CDATA[Lieferadresse]]></de>
+            <en><![CDATA[Delivery address]]></en>
+        </locale>
+        <locale name="body.deliveryAddress_like_invoiceAddress">
+            <de><![CDATA[wie Rechnungs- / Kundenadresse]]></de>
+            <en><![CDATA[as invoice / customer address]]></en>
+        </locale>
         
     </groups>
 
