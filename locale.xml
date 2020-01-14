@@ -160,6 +160,14 @@
             <de><![CDATA[Projekt: [project]]]></de>
             <en><![CDATA[Project: [project]]]></en>
         </locale>
+        <locale name="body.deliveryAddress">
+            <de><![CDATA[Lieferadresse]]></de>
+            <en><![CDATA[Delivery address]]></en>
+        </locale>
+        <locale name="body.deliveryAddress_like_invoiceAddress">
+            <de><![CDATA[wie Rechnungs- / Kundenadresse]]></de>
+            <en><![CDATA[as invoice / customer address]]></en>
+        </locale>
         
     </groups>
 
