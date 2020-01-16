@@ -30,6 +30,10 @@
     clear: both;
 }
 
+.invoice-header-project {
+    float: right;
+}
+
 .articles-article {
     border-bottom: 1px solid #DDDDDD;
     margin-top: 20px;
@@ -41,6 +45,14 @@
 
 .articles-header {
     font-size: 20px;
+}
+
+.delivery-address {
+    margin: 40px 0 0 0;
+}
+
+.delivery-address-label {
+    font-weight: bold;
 }
 
 /** header
