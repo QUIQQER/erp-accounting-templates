@@ -30,6 +30,10 @@
             <de><![CDATA[Bearbeiter]]></de>
             <en><![CDATA[Editor]]></en>
         </locale>
+        <locale name="body.project">
+            <de><![CDATA[Projekt: [project]]]></de>
+            <en><![CDATA[Project: [project]]]></en>
+        </locale>
 
         <locale name="footer.top.box" html="true">
             <de><![CDATA[&nbsp;]]></de>

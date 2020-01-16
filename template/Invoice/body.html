@@ -15,11 +15,30 @@
     {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
     {/if}
     {template_event name="quiqqer::invoice-accounting-template::invoiceDataEnd" InvoiceView=$this}
+
+    {if $useShipping}
+    <div class="delivery-address">
+        <span class="delivery-address-label">
+            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress"}:
+        </span><br/>
+        {if $DeliveryAddress}
+            {$DeliveryAddress->getDisplay()}
+        {else}
+            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress_like_invoiceAddress"}
+        {/if}
+    </div>
+    {/if}
 </div>
 
 <h1 class="invoice-header">
     {locale group="quiqqer/invoice-accounting-template" var="title.invoice"}
 </h1>
+
+{if !empty($projectName)}
+<span class="invoice-header-project">
+    {locale group="quiqqer/invoice-accounting-template" var="body.project" project=$projectName}
+</span>
+{/if}
 
 <div class="invoice-articles">
     {$ArticleList->toHTML()}
