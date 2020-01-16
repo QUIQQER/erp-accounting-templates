@@ -53,6 +53,9 @@
     {if !empty($contactName)}
     {locale group="quiqqer/invoice-accounting-template" var="offer.body.customer.contact"}: {$contactName}
     {/if}
+    {if !empty($inquiryDate)}
+    <br/>{locale group="quiqqer/invoice-accounting-template" var="offer.body.customer.inquiry_date"}: {$inquiryDate}
+    {/if}
     {if !empty($customerOfferNo)}
     <br/>{locale group="quiqqer/invoice-accounting-template" var="offer.body.customer.offer_no"}: {$customerOfferNo}
     {/if}

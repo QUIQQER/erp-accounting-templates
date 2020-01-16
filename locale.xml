@@ -172,6 +172,10 @@
             <de><![CDATA[wie Rechnungs- / Kundenadresse]]></de>
             <en><![CDATA[as invoice / customer address]]></en>
         </locale>
+        <locale name="offer.body.inquiry_date">
+            <de><![CDATA[Anfrage vom]]></de>
+            <en><![CDATA[Inquiry from]]></en>
+        </locale>
         
     </groups>
 
