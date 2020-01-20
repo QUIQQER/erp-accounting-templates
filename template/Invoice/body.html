@@ -45,10 +45,8 @@
 </div>
 
 <div class="invoice-additional">
-    {if empty($transaction)}
-    {locale group="quiqqer/invoice" var="additional.invoice.text.timeForPayment"}: {$timeForPayment}
-    {else}
-    {$transaction}
+    {if !empty($transaction)}
+        {$transaction}
     {/if}
 
     <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
