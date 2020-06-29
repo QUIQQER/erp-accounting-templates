@@ -1,0 +1,36 @@
+<quiqqer>
+    <package>
+
+        <title>
+            <locale group="quiqqer/invoice-accounting-template" var="package.title"/>
+        </title>
+
+        <description>
+            <locale group="quiqqer/invoice-accounting-template" var="package.description"/>
+        </description>
+
+<!--        <image src="URL_OPT_DIR/quiqqer/invoice-accounting-template/bin/images/Logo.jpg"/>-->
+
+        <preview>
+            <!-- <image src="URL_OPT_DIR/quiqqer/invoice-accounting-template/bin/images/preview/log_settings.jpg"/> -->
+        </preview>
+
+        <support>
+            <email><![CDATA[support@pcsg.de]]></email>
+            <forum><![CDATA[https://community.quiqqer.com]]></forum>
+            <source><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template]]></source>
+            <issues><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template/issues]]></issues>
+            <wiki><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template/wikis/home]]></wiki>
+        </support>
+
+        <copyright>
+            <name><![CDATA[PCSG - Computer & Internet Service OHG]]></name>
+            <license><![CDATA[GPL-3.0+]]></license>
+        </copyright>
+
+        <provider>
+            <erpOutputTemplate src="\QUI\ERP\Accounting\Template\Template"/>
+        </provider>
+
+    </package>
+</quiqqer>
