@@ -41,12 +41,22 @@ class Template implements OutputTemplateProviderInterface
      */
     public static function getTemplates(string $entityType)
     {
-        return [
-            [
-                'id'    => 'default',
-                'title' => QUI::getLocale()->get('quiqqer/invoice-accounting-template', 'package.title')
-            ]
-        ];
+        switch ($entityType) {
+            case self::ENTITY_TYPE_CANCELLED:
+            case self::ENTITY_TYPE_CONTRACT:
+            case self::ENTITY_TYPE_CREDIT_NOTE:
+            case self::ENTITY_TYPE_INVOICE:
+            case self::ENTITY_TYPE_OFFER:
+                return [
+                    [
+                        'id'    => 'default',
+                        'title' => QUI::getLocale()->get('quiqqer/invoice-accounting-template', 'package.title')
+                    ]
+                ];
+                break;
+        }
+
+        return [];
     }
 
     /**
