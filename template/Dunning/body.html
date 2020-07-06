@@ -4,42 +4,21 @@
     {/if}
 </div>
 
-
 <div class="dunning-data">
-    {locale group="quiqqer/dunning-accounting-template" var="body.id"}: {$this->getId()}<br/>
-    {locale group="quiqqer/dunning-accounting-template" var="body.date"}: {$this->getAttribute('date')}<br/>
+    {locale group="quiqqer/invoice-accounting-template" var="dunning.label.invoice_id"}: {$Invoice->getId()}<br/>
+    {locale group="quiqqer/invoice-accounting-template" var="body.date"}: {$Dunning->getCreateDateFormatted()}<br/>
     {if $Customer}
-    {locale group="quiqqer/dunning-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+        {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
     {if $Editor}
-    {locale group="quiqqer/dunning-accounting-template" var="body.editor"}: {$Editor->getName()}
+        {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
     {/if}
-    {template_event name="quiqqer::dunning-accounting-template::invoiceDataEnd" InvoiceView=$this}
 </div>
 
 <h1 class="dunning-header">
-    {locale group="quiqqer/dunning-accounting-template" var="title.invoice"}
+    {$Dunning->getDunningLevel()->getTitle()}
 </h1>
 
-{if !empty($projectName)}
-<span class="dunning-header-project">
-    {locale group="quiqqer/dunning-accounting-template" var="body.project" project=$projectName}
-</span>
-{/if}
-
-<div class="dunning-articles">
-    {$ArticleList->toHTML()}
-</div>
-
-<div class="dunning-additional">
-    {if !empty($transaction)}
-        {$transaction}
-    {/if}
-
-    <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
-    <br/>{$this->getAttribute('additional_invoice_text')}
-
-    {if $Payment->getInvoiceInformationText($this) !== ''}
-    <br/>{$Payment->getInvoiceInformationText($this)}
-    {/if}
+<div class="dunning-content">
+    {$content}
 </div>

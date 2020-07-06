@@ -16,6 +16,7 @@ class Template implements OutputTemplateProviderInterface
     const ENTITY_TYPE_CREDIT_NOTE = 'CreditNote';
     const ENTITY_TYPE_INVOICE     = 'Invoice';
     const ENTITY_TYPE_OFFER       = 'Offer';
+    const ENTITY_TYPE_DUNNING     = 'Dunning';
 
     /**
      * Get all output types the template package provides templates for
@@ -29,7 +30,8 @@ class Template implements OutputTemplateProviderInterface
             self::ENTITY_TYPE_CONTRACT,
             self::ENTITY_TYPE_CREDIT_NOTE,
             self::ENTITY_TYPE_INVOICE,
-            self::ENTITY_TYPE_OFFER
+            self::ENTITY_TYPE_OFFER,
+            self::ENTITY_TYPE_DUNNING
         ];
     }
 
@@ -47,6 +49,7 @@ class Template implements OutputTemplateProviderInterface
             case self::ENTITY_TYPE_CREDIT_NOTE:
             case self::ENTITY_TYPE_INVOICE:
             case self::ENTITY_TYPE_OFFER:
+            case self::ENTITY_TYPE_DUNNING:
                 return [
                     [
                         'id'    => 'default',

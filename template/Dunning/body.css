@@ -1,12 +1,14 @@
 .dunning-company,
 .dunning-customer,
-.dunning-articles {
+.dunning-content,
+.dunning-header {
     clear: both;
     display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.dunning-articles {
+.dunning-header {
+    float: left;
     margin-top: 60px;
     width: 100%;
 }
@@ -32,109 +34,4 @@
 
 .dunning-header-project {
     float: right;
-}
-
-.articles-article {
-    border-bottom: 1px solid #DDDDDD;
-    margin-top: 20px;
-    width: 100%;
-
-    border-collapse: separate;
-    border-spacing: 10px;
-}
-
-.articles-header {
-    font-size: 20px;
-}
-
-.delivery-address {
-    margin: 40px 0 0 0;
-}
-
-.delivery-address-label {
-    font-weight: bold;
-}
-
-/** header
- ========================================== */
-
-.articles-article-header {
-    color: #999999;
-    font-size: 12px;
-    line-height: 30px;
-}
-
-.articles-article-header-pos,
-.articles-article-header-quantity {
-    text-align: center;
-    width: 100px;
-}
-
-.articles-article-header-information {
-    text-align: left;
-}
-
-.articles-article-header-price,
-.articles-article-header-unitprice {
-    text-align: right;
-}
-
-/** articles
- ========================================== */
-
-.articles-article-pos,
-.articles-article-quantity {
-    text-align: center;
-    vertical-align: top;
-}
-
-.articles-article-information-title {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.articles-article-information-description {
-    font-size: 12px;
-    text-align: left;
-    vertical-align: top;
-}
-
-.articles-article-unitprice {
-    text-align: right;
-    vertical-align: top;
-}
-
-.articles-article-price {
-    /*color: #e91d2c;*/
-    text-align: right;
-    vertical-align: top;
-}
-
-.articles-article p {
-    margin: 0;
-}
-
-/** sum
- ========================================== */
-
-.articles-sum {
-    float: right;
-    margin-top: 20px;
-    text-align: right;
-}
-
-.articles-sum-row-subsum-text {
-    border-bottom: 1px solid #999999;
-}
-
-.articles-sum-row-subsum-value {
-    border-bottom: 1px solid #999999;
-}
-
-.articles-sum-row-sum-text {
-    border-bottom: 3px double #999999;
-}
-
-.articles-sum-row-sum-value {
-    border-bottom: 3px double #999999;
 }

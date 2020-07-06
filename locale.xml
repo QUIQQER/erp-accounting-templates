@@ -193,6 +193,11 @@
             <en><![CDATA[Inquiry from]]></en>
         </locale>
         
+        <locale name="dunning.label.invoice_id">
+            <de><![CDATA[In Bezug auf Rechnung]]></de>
+            <en><![CDATA[Concerning invoice]]></en>
+        </locale>
+        
     </groups>
 
 </locales>
