@@ -80,11 +80,12 @@ class Template implements OutputTemplateProviderInterface
      * @param string|int $templateId
      * @param string $entityType
      * @param EngineInterface $Engine
+     * @param mixed $Entity - The entity the output is created for
      * @return string|false
      *
      * @throws QUI\Exception
      */
-    public static function getHeaderHtml($templateId, string $entityType, EngineInterface $Engine)
+    public static function getHeaderHtml($templateId, string $entityType, EngineInterface $Engine, $Entity)
     {
         $tplDir     = self::getTemplateDir();
         $tplTypeDir = $tplDir.$entityType.'/';
@@ -114,11 +115,12 @@ class Template implements OutputTemplateProviderInterface
      * @param string|int $templateId
      * @param string $entityType
      * @param EngineInterface $Engine
+     * @param mixed $Entity - The entity the output is created for
      * @return string|false
      *
      * @throws QUI\Exception
      */
-    public static function getBodyHtml($templateId, string $entityType, EngineInterface $Engine)
+    public static function getBodyHtml($templateId, string $entityType, EngineInterface $Engine, $Entity)
     {
         $tplTypeDir = self::getTemplateDir().$entityType.'/';
         $htmlFile   = $tplTypeDir.'body.html';
@@ -144,11 +146,12 @@ class Template implements OutputTemplateProviderInterface
      * @param string|int $templateId
      * @param string $entityType
      * @param EngineInterface $Engine
+     * @param mixed $Entity - The entity the output is created for
      * @return string|false
      *
      * @throws QUI\Exception
      */
-    public static function getFooterHtml($templateId, string $entityType, EngineInterface $Engine)
+    public static function getFooterHtml($templateId, string $entityType, EngineInterface $Engine, $Entity)
     {
         $tplDir     = self::getTemplateDir();
         $tplTypeDir = $tplDir.$entityType.'/';
