@@ -6,6 +6,11 @@
             <de><![CDATA[QUIQQER - Rechnungssystem - Rechnungstemplate]]></de>
             <en><![CDATA[QUIQQER - Invoice - Accounting template]]></en>
         </locale>
+        
+        <locale name="template.title">
+            <de><![CDATA[QUIQQER ERP Rechnungswesen - Standard-Template]]></de>
+            <en><![CDATA[QUIQQER ERP Accounting - Default template]]></en>
+        </locale>
     </groups>
 
     <groups name="quiqqer/invoice-accounting-template" datatype="php">
