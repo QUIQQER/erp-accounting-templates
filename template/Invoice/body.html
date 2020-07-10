@@ -6,37 +6,37 @@
 
 
 <div class="invoice-data">
-    {locale group="quiqqer/invoice-accounting-template" var="body.id"}: {$this->getId()}<br/>
-    {locale group="quiqqer/invoice-accounting-template" var="body.date"}: {$this->getAttribute('date')}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$this->getAttribute('date')}<br/>
     {if $Customer}
-    {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
     {if $Editor}
-    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+    {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
-    {template_event name="quiqqer::invoice-accounting-template::invoiceDataEnd" InvoiceView=$this}
+    {template_event name="quiqqer::erp-accounting-templates::invoiceDataEnd" InvoiceView=$this}
 
     {if $useShipping}
     <div class="delivery-address">
         <span class="delivery-address-label">
-            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress"}:
+            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:
         </span><br/>
         {if $DeliveryAddress}
             {$DeliveryAddress->getDisplay()}
         {else}
-            {locale group="quiqqer/invoice-accounting-template" var="body.deliveryAddress_like_invoiceAddress"}
+            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
         {/if}
     </div>
     {/if}
 </div>
 
 <h1 class="invoice-header">
-    {locale group="quiqqer/invoice-accounting-template" var="title.invoice"}
+    {locale group="quiqqer/erp-accounting-templates" var="title.invoice"}
 </h1>
 
 {if !empty($projectName)}
 <span class="invoice-header-project">
-    {locale group="quiqqer/invoice-accounting-template" var="body.project" project=$projectName}
+    {locale group="quiqqer/erp-accounting-templates" var="body.project" project=$projectName}
 </span>
 {/if}
 

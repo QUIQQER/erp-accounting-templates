@@ -4,19 +4,19 @@ Rechnungs HTML PDF Template
 
 Paketname:
 
-    quiqqer/invoice-accounting-template
+    quiqqer/erp-accounting-templates
 
 
 Installation
 ------------
 
-Der Paketname ist: quiqqer/invoice-accounting-template
+Der Paketname ist: quiqqer/erp-accounting-templates
 
 Mitwirken
 ----------
 
-- Issue Tracker: https://dev.quiqqer.com/quiqqer/invoice-accounting-template/issues
-- Source Code: https://dev.quiqqer.com/quiqqer/invoice-accounting-template/tree/master
+- Issue Tracker: https://dev.quiqqer.com/quiqqer/erp-accounting-templates/issues
+- Source Code: https://dev.quiqqer.com/quiqqer/erp-accounting-templates/tree/master
 
 
 Support

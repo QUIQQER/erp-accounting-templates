@@ -5,13 +5,13 @@
 </div>
 
 <div class="dunning-data">
-    {locale group="quiqqer/invoice-accounting-template" var="dunning.label.invoice_id"}: {$Invoice->getId()}<br/>
-    {locale group="quiqqer/invoice-accounting-template" var="body.date"}: {$Dunning->getCreateDateFormatted()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="dunning.label.invoice_id"}: {$Invoice->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$Dunning->getCreateDateFormatted()}<br/>
     {if $Customer}
-        {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+        {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
     {if $Editor}
-        {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+        {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
 </div>
 

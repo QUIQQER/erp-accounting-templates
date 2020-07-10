@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
-    <groups name="quiqqer/invoice-accounting-template" datatype="php,js">
+    <groups name="quiqqer/erp-accounting-templates" datatype="php,js">
         <locale name="package.title">
             <de><![CDATA[QUIQQER - Rechnungssystem - Rechnungstemplate]]></de>
             <en><![CDATA[QUIQQER - Invoice - Accounting template]]></en>
@@ -13,7 +13,7 @@
         </locale>
     </groups>
 
-    <groups name="quiqqer/invoice-accounting-template" datatype="php">
+    <groups name="quiqqer/erp-accounting-templates" datatype="php">
         <locale name="header" html="true">
             <de><![CDATA[&nbsp;]]></de>
             <en><![CDATA[&nbsp;]]></en>

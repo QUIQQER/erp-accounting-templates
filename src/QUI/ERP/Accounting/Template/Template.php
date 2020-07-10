@@ -71,7 +71,7 @@ class Template implements OutputTemplateProviderInterface
             $Locale = QUI::getLocale();
         }
 
-        return $Locale->get('quiqqer/invoice-accounting-template', 'template.title');
+        return $Locale->get('quiqqer/erp-accounting-templates', 'template.title');
     }
 
     /**
@@ -184,6 +184,6 @@ class Template implements OutputTemplateProviderInterface
      */
     protected static function getTemplateDir()
     {
-        return QUI::getPackage('quiqqer/invoice-accounting-template')->getDir().'template/';
+        return QUI::getPackage('quiqqer/erp-accounting-templates')->getDir().'template/';
     }
 }

@@ -2,25 +2,25 @@
     <package>
 
         <title>
-            <locale group="quiqqer/invoice-accounting-template" var="package.title"/>
+            <locale group="quiqqer/erp-accounting-templates" var="package.title"/>
         </title>
 
         <description>
-            <locale group="quiqqer/invoice-accounting-template" var="package.description"/>
+            <locale group="quiqqer/erp-accounting-templates" var="package.description"/>
         </description>
 
-<!--        <image src="URL_OPT_DIR/quiqqer/invoice-accounting-template/bin/images/Logo.jpg"/>-->
+<!--        <image src="URL_OPT_DIR/quiqqer/erp-accounting-templates/bin/images/Logo.jpg"/>-->
 
         <preview>
-            <!-- <image src="URL_OPT_DIR/quiqqer/invoice-accounting-template/bin/images/preview/log_settings.jpg"/> -->
+            <!-- <image src="URL_OPT_DIR/quiqqer/erp-accounting-templates/bin/images/preview/log_settings.jpg"/> -->
         </preview>
 
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
             <forum><![CDATA[https://community.quiqqer.com]]></forum>
-            <source><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template]]></source>
-            <issues><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template/issues]]></issues>
-            <wiki><![CDATA[https://dev.quiqqer.com/quiqqer/invoice-accounting-template/wikis/home]]></wiki>
+            <source><![CDATA[https://dev.quiqqer.com/quiqqer/erp-accounting-templates]]></source>
+            <issues><![CDATA[https://dev.quiqqer.com/quiqqer/erp-accounting-templates/issues]]></issues>
+            <wiki><![CDATA[https://dev.quiqqer.com/quiqqer/erp-accounting-templates/wikis/home]]></wiki>
         </support>
 
         <copyright>
