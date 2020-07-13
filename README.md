@@ -1,5 +1,7 @@
-Rechnungs HTML PDF Template
+QUIQQER ERP Templates
 ========
+
+Standard-Vorlagen für QUIQQER ERP Dokumente wie Rechnungen, Mahnungen, Verträge und Angebote.
 
 
 Paketname:
