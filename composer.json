@@ -1,19 +1,19 @@
 {
   "name": "quiqqer\/erp-accounting-templates",
-  "type": "quiqqer-invoice-template",
-  "description": "",
+  "type": "quiqqer-plugin",
+  "description": "Basic templates for QUIQQER ERP accounting documents.",
   "license": "MIT",
   "authors": [
     {
       "name": "Henning Leutz",
       "email": "leutz@pcsg.de",
-      "homepage": "http:\/\/www.pcsg.de",
+      "homepage": "https:\/\/www.pcsg.de",
       "role": "Developer"
     }
   ],
   "support": {
     "email": "support@pcsg.de",
-    "url": "http:\/\/www.pcsg.de"
+    "url": "https:\/\/www.pcsg.de"
   },
   "require": {
     "php": ">=5.6",
