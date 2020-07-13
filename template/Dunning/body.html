@@ -1,0 +1,24 @@
+<div class="dunning-customer">
+    {if $Address}
+    {$Address->getDisplay()}
+    {/if}
+</div>
+
+<div class="dunning-data">
+    {locale group="quiqqer/erp-accounting-templates" var="dunning.label.invoice_id"}: {$Invoice->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$Dunning->getCreateDateFormatted()}<br/>
+    {if $Customer}
+        {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
+    {/if}
+    {if $Editor}
+        {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
+    {/if}
+</div>
+
+<h1 class="dunning-header">
+    {$Dunning->getDunningLevel()->getTitle()}
+</h1>
+
+<div class="dunning-content">
+    {$content}
+</div>

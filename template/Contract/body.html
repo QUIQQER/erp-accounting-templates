@@ -7,31 +7,31 @@
 
 <div class="contract-data">
     {if $Customer}
-    {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.id"}: {$this->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.id"}: {$this->getId()}<br/>
     {if $Editor}
-    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+    {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
 </div>
 
 <h1 class="invoice-header">
-    {locale group="quiqqer/invoice-accounting-template" var="title.contract"}
+    {locale group="quiqqer/erp-accounting-templates" var="title.contract"}
 </h1>
 
 <div class="contract-details">
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.begin"}: {$begin}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.begin"}: {$begin}<br/>
     {if $terminationDate}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.terminationDate"}: {$terminationDate}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.terminationDate"}: {$terminationDate}<br/>
     {/if}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.minDurationInterval"}: {$minDurationInterval}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.minDurationInterval"}: {$minDurationInterval}<br/>
     {if $extension}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.extension"}: {$extension}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.extension"}: {$extension}<br/>
     {/if}
     {if $periodOfNotice}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.periodOfNotice"}: {$periodOfNotice}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.periodOfNotice"}: {$periodOfNotice}<br/>
     {/if}
-    {locale group="quiqqer/invoice-accounting-template" var="contract.body.invoiceInterval"}: {$invoiceInterval}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="contract.body.invoiceInterval"}: {$invoiceInterval}<br/>
 </div>
 
 <div class="contract-articles">

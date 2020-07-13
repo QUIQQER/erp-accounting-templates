@@ -1,0 +1,37 @@
+.dunning-company,
+.dunning-customer,
+.dunning-content,
+.dunning-header {
+    clear: both;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dunning-header {
+    float: left;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.dunning-customer address {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+.dunning-data {
+    float: right;
+}
+
+.dunning-additional {
+    clear: both;
+    float: left;
+    margin-top: 40px;
+}
+
+.dunning-header {
+    clear: both;
+}
+
+.dunning-header-project {
+    float: right;
+}

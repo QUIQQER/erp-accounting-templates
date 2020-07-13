@@ -6,18 +6,18 @@
 
 
 <div class="invoice-data">
-    {locale group="quiqqer/invoice-accounting-template" var="body.id"}: {$this->getId()}<br/>
-    {locale group="quiqqer/invoice-accounting-template" var="body.date"}: {$this->getAttribute('date')}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$this->getAttribute('date')}<br/>
     {if $Customer}
-    {locale group="quiqqer/invoice-accounting-template" var="body.customerId"}: {$Customer->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
     {if $Editor}
-    {locale group="quiqqer/invoice-accounting-template" var="body.editor"}: {$Editor->getName()}
+    {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
 </div>
 
 <h1 class="invoice-header">
-    {locale group="quiqqer/invoice-accounting-template" var="title.canceled"}
+    {locale group="quiqqer/erp-accounting-templates" var="title.canceled"}
 </h1>
 
 <div class="invoice-articles">
