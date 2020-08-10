@@ -9,12 +9,6 @@
             <locale group="quiqqer/erp-accounting-templates" var="package.description"/>
         </description>
 
-<!--        <image src="URL_OPT_DIR/quiqqer/erp-accounting-templates/bin/images/Logo.jpg"/>-->
-
-        <preview>
-            <!-- <image src="URL_OPT_DIR/quiqqer/erp-accounting-templates/bin/images/preview/log_settings.jpg"/> -->
-        </preview>
-
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
             <forum><![CDATA[https://community.quiqqer.com]]></forum>
