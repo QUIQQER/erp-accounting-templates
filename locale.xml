@@ -3,8 +3,12 @@
 
     <groups name="quiqqer/erp-accounting-templates" datatype="php,js">
         <locale name="package.title">
-            <de><![CDATA[QUIQQER - Rechnungssystem - Rechnungstemplate]]></de>
-            <en><![CDATA[QUIQQER - Invoice - Accounting template]]></en>
+            <de><![CDATA[QUIQQER ERP Rechnungswesen - Standard-Templates]]></de>
+            <en><![CDATA[QUIQQER ERP Accounting - Default templates]]></en>
+        </locale>
+        <locale name="package.description">
+            <de><![CDATA[Standard-Templates für Dokumente des Rechnungswesen wie Rechnungen, Gutschriften, Verträge, Mahnungen etc.]]></de>
+            <en><![CDATA[Standard templates for accounting documents such as invoices, credit notes, contracts, dunnings etc.]]></en>
         </locale>
         
         <locale name="template.title">
