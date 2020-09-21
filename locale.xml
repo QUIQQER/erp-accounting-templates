@@ -190,7 +190,11 @@
             <de><![CDATA[In Bezug auf Rechnung]]></de>
             <en><![CDATA[Concerning invoice]]></en>
         </locale>
-        
+        <locale name="dunning.info.open_items">
+            <de><![CDATA[Die Liste all Ihrer offenen Posten bis zum jetzigen Zeitpunkt können Sie hier einsehen:]]></de>
+            <en><![CDATA[You can view the list of all of your open items up to and until now here:]]></en>
+        </locale>
+
     </groups>
 
 </locales>

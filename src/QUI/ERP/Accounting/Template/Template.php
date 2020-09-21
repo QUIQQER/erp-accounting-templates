@@ -12,12 +12,13 @@ class Template implements OutputTemplateProviderInterface
     /**
      * Entity types
      */
-    const ENTITY_TYPE_CANCELLED   = 'Canceled';
-    const ENTITY_TYPE_CONTRACT    = 'Contract';
-    const ENTITY_TYPE_CREDIT_NOTE = 'CreditNote';
-    const ENTITY_TYPE_INVOICE     = 'Invoice';
-    const ENTITY_TYPE_OFFER       = 'Offer';
-    const ENTITY_TYPE_DUNNING     = 'Dunning';
+    const ENTITY_TYPE_CANCELLED       = 'Canceled';
+    const ENTITY_TYPE_CONTRACT        = 'Contract';
+    const ENTITY_TYPE_CREDIT_NOTE     = 'CreditNote';
+    const ENTITY_TYPE_INVOICE         = 'Invoice';
+    const ENTITY_TYPE_OFFER           = 'Offer';
+    const ENTITY_TYPE_DUNNING         = 'Dunning';
+    const ENTITY_TYPE_OPEN_ITEMS_LIST = 'OpenItemsList';
 
     /**
      * Get all output types the template package provides templates for
@@ -32,7 +33,8 @@ class Template implements OutputTemplateProviderInterface
             self::ENTITY_TYPE_CREDIT_NOTE,
             self::ENTITY_TYPE_INVOICE,
             self::ENTITY_TYPE_OFFER,
-            self::ENTITY_TYPE_DUNNING
+            self::ENTITY_TYPE_DUNNING,
+            self::ENTITY_TYPE_OPEN_ITEMS_LIST
         ];
     }
 
@@ -51,6 +53,7 @@ class Template implements OutputTemplateProviderInterface
             case self::ENTITY_TYPE_INVOICE:
             case self::ENTITY_TYPE_OFFER:
             case self::ENTITY_TYPE_DUNNING:
+            case self::ENTITY_TYPE_OPEN_ITEMS_LIST:
                 return ['system_default'];
                 break;
         }

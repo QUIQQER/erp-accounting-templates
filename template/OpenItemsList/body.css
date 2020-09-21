@@ -1,0 +1,70 @@
+.openitemslist-company,
+.openitemslist-customer,
+.openitemslist-content,
+.openitemslist-header {
+    clear: both;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.openitemslist-header {
+    float: left;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.openitemslist-customer address {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+}
+
+.openitemslist-data {
+    float: right;
+}
+
+.openitemslist-additional {
+    clear: both;
+    float: left;
+    margin-top: 40px;
+}
+
+.openitemslist-header {
+    clear: both;
+}
+
+.openitemslist-header-project {
+    float: right;
+}
+
+.openitemslist-tbl-align-right {
+    text-align: right;
+}
+
+.openitemslist-content table {
+    font-size: 14px;
+}
+
+.openitemslist-content table tbody tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.openitems-tbl-money {
+    width: 6em;
+}
+
+.openitemslist-tbl-100 {
+    width: 6em;
+}
+
+.openitemslist-tbl-sums {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.openitems-tbl-daysdue {
+    width: 3em;
+}
+
+.openitems-tbl-dunninglevel {
+    width: 1em;
+}
