@@ -211,6 +211,11 @@
             <en><![CDATA[You can view the list of all of your open items up to and until now here:]]></en>
         </locale>
 
+        <locale name="OpenItemsList.title">
+            <de><![CDATA[Offene Posten Liste]]></de>
+            <en><![CDATA[Open Items List]]></en>
+        </locale>
+
     </groups>
 
 </locales>
