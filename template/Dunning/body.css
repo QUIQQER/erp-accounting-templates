@@ -1,7 +1,8 @@
 .dunning-company,
 .dunning-customer,
 .dunning-content,
-.dunning-header {
+.dunning-header,
+.dunning-openitemslist {
     clear: both;
     display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -34,4 +35,12 @@
 
 .dunning-header-project {
     float: right;
+}
+
+.dunning-openitemslist {
+    margin-top: 50px;
+}
+
+.dunning-openitemslist-info {
+    margin-bottom: 20px;
 }

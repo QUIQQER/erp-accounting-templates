@@ -1,0 +1,18 @@
+<div class="openitemslist-customer">
+    {if $Address}
+    {$Address->getDisplay()}
+    {/if}
+</div>
+
+<div class="openitemslist-data">
+    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$OpenItemsList->getDateFormatted()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
+</div>
+
+<h1 class="openitemslist-header">
+    {locale group="quiqqer/erp-accounting-templates" var="OpenItemsList.title"}
+</h1>
+
+<div class="openitemslist-content">
+    {$OpenItemsList->getListAsHtmlTable()}
+</div>

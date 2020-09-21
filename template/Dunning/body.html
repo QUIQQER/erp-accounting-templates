@@ -22,3 +22,12 @@
 <div class="dunning-content">
     {$content}
 </div>
+
+{if $openItemsListTable}
+<div class="dunning-openitemslist">
+    <div class="dunning-openitemslist-info">
+        {locale group="quiqqer/erp-accounting-templates" var="dunning.info.open_items"}
+    </div>
+    {$openItemsListTable}
+</div>
+{/if}
