@@ -1,21 +1,157 @@
+{if isset($Config)}
 <footer class="invoice-footer">
     <div style="width: 100%;">
         {locale group="quiqqer/erp-accounting-templates" var="footer.top.box"}
     </div>
 
     <div class="invoice-footer-container">
-        {locale group="quiqqer/erp-accounting-templates" var="footer.box.1"}
+        <header class="invoice-footer-companyName">
+        {if $Config->get('company', 'name')}{$Config->get('company', 'name')}{/if}
+        </header>
+        <ul>
+            {if $Config->get('company', 'street')}
+            <li>
+                {$Config->get('company', 'street')}
+            </li>
+            {/if}
+
+            {if $Config->get('company', 'zipCode') || $Config->get('company', 'city')}
+            <li>
+                {if $Config->get('company', 'zipCode')}
+                {$Config->get('company', 'zipCode')}
+                {/if}
+
+                {if $Config->get('company', 'city')}
+                {$Config->get('company', 'city')}
+                {/if}
+            </li>
+            {/if}
+        </ul>
+
+        {if $Config->get('company', 'owner')}
+        <header class="invoice-footer-companyOwner">
+            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.owner.title"}
+        </header>
+        <ul>
+            <li>
+                {$Config->get('company', 'owner')}
+            </li>
+        </ul>
+        {/if}
     </div>
 
     <div class="invoice-footer-container">
-        {locale group="quiqqer/erp-accounting-templates" var="footer.box.2"}
+        <header>
+            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.title"}
+        </header>
+
+
+        <table>
+            <tbody>
+
+            {if $Config->get('company', 'phone')}
+            <tr>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.phone"}</td>
+                <td>{$Config->get('company', 'phone')}</td>
+            </tr>
+            {/if}
+
+            {if $Config->get('company', 'fax')}
+            <tr>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.fax"}</td>
+                <td>{$Config->get('company', 'fax')}</td>
+            </tr>
+            {/if}
+
+            {if $Config->get('company', 'email')}
+            <tr>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.email"}</td>
+                <td>{$Config->get('company', 'email')}</td>
+            </tr>
+            {/if}
+
+            {if $Config->get('company', 'web')}
+            <tr>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.web"}</td>
+                <td>{$Config->get('company', 'web')}</td>
+            </tr>
+            {/if}
+            </tbody>
+        </table>
+
     </div>
 
     <div class="invoice-footer-container">
-        {locale group="quiqqer/erp-accounting-templates" var="footer.box.3"}
+        <header>
+            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.taxInfo.title"}
+        </header>
+
+        <ul>
+            {if $Config->get('company', 'taxId')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.taxInfo.taxId"}
+                {$Config->get('company', 'taxId')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'taxNumber')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.taxInfo.taxNumber"}
+                {$Config->get('company', 'taxNumber')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'hrb')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.taxInfo.hrb"}
+                {$Config->get('company', 'hrb')}
+            </li>
+            {/if}
+        </ul>
+
     </div>
 
     <div class="invoice-footer-container">
-        {locale group="quiqqer/erp-accounting-templates" var="footer.box.4"}
+
+        <header>
+            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bank.title"}
+        </header>
+        <ul>
+            {if $Config->get('company', 'bankName')}
+            <li>
+                {$Config->get('company', 'bankName')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'bankIban')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankIban"}
+                {$Config->get('company', 'bankIban')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'bankBic')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankBic"}
+                {$Config->get('company', 'bankBic')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'bankSwift')}
+            <li>
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankSwift"}
+                {$Config->get('company', 'bankSwift')}
+            </li>
+            {/if}
+            {if $Config->get('company', 'bankAccountNumber') || $Config->get('company', 'bankCode')}
+            <li>
+                {if $Config->get('company', 'bankAccountNumber')}
+                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankAccountNumber"}
+                {$Config->get('company', 'bankAccountNumber')}
+                {/if}
+
+                {if $Config->get('company', 'bankCode')}
+                | {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankCode"}
+                {$Config->get('company', 'bankCode')}
+                {/if}
+            </li>
+            {/if}
+        </ul>
     </div>
 </footer>
+{/if}

@@ -10,4 +10,37 @@
     float: left;
     font-size: 12px;
     width: 25%;
+    line-height: 18px;
+}
+
+.invoice-footer-container table {
+    font-size: 12px;
+    line-height: 18px;
+    border-spacing: 0;
+}
+
+.invoice-footer-container header {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.invoice-footer-container .invoice-footer-companyName {
+    font-size: 14px;
+}
+
+.invoice-footer-container .invoice-footer-companyOwner {
+    margin-bottom: 0;
+}
+
+.invoice-footer-container ul,
+.invoice-footer-container table {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    color: #444444;
+}
+
+.table-label {
+    padding-right: 5px;
 }

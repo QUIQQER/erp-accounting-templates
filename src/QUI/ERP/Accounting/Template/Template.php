@@ -173,6 +173,14 @@ class Template implements OutputTemplateProviderInterface
             $output .= '<style>'.\file_get_contents($tplDir.'footer.css').'</style>';
         }
 
+        try {
+            $Config = QUI::getPackage('quiqqer/erp')->getConfig();
+
+            $Engine->assign('Config', $Config);
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeDebugException($Exception);
+        }
+
         $output .= $Engine->fetch($htmlFile);
 
         return $output;
