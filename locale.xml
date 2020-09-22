@@ -65,6 +65,79 @@
             <en><![CDATA[&nbsp;]]></en>
         </locale>
 
+
+        <locale name="footer.box.company.contact.title" html="true">
+            <de><![CDATA[Telefon | Mail | Web]]></de>
+            <en><![CDATA[Phone | Mail | Web]]></en>
+        </locale>
+        <locale name="footer.box.company.contact.phone">
+            <de><![CDATA[Telefon:]]></de>
+            <en><![CDATA[Phone:]]></en>
+        </locale>
+        <locale name="footer.box.company.contact.fax">
+            <de><![CDATA[Fax:]]></de>
+            <en><![CDATA[Fax:]]></en>
+        </locale>
+        <locale name="footer.box.company.contact.fax">
+            <de><![CDATA[Fax:]]></de>
+            <en><![CDATA[Fax:]]></en>
+        </locale>
+        <locale name="footer.box.company.contact.email">
+            <de><![CDATA[E-Mail:]]></de>
+            <en><![CDATA[E-Mail:]]></en>
+        </locale>
+        <locale name="footer.box.company.contact.web">
+            <de><![CDATA[Web:]]></de>
+            <en><![CDATA[Web:]]></en>
+        </locale>
+
+        <locale name="footer.box.company.taxInfo.title" html="true">
+            <de><![CDATA[Steuerinformationen]]></de>
+            <en><![CDATA[Tax]]></en>
+        </locale>
+        <locale name="footer.box.company.taxInfo.taxId">
+            <de><![CDATA[Umsatzsteuer ID:]]></de>
+            <en><![CDATA[Tax ID:]]></en>
+        </locale>
+        <locale name="footer.box.company.taxInfo.taxNumber">
+            <de><![CDATA[Steuernummer:]]></de>
+            <en><![CDATA[Tax number:]]></en>
+        </locale>
+        <locale name="footer.box.company.taxInfo.hrb">
+            <de><![CDATA[HRB:]]></de>
+            <en><![CDATA[HRB number:]]></en>
+        </locale>
+
+        <locale name="footer.box.company.owner.title" html="true">
+            <de><![CDATA[Geschäftsführer]]></de>
+            <en><![CDATA[CEO]]></en>
+        </locale>
+
+        <locale name="footer.box.company.bank.title" html="true">
+            <de><![CDATA[Bankverbindung]]></de>
+            <en><![CDATA[Bank details]]></en>
+        </locale>
+        <locale name="footer.box.company.bankIban">
+            <de><![CDATA[IBAN]]></de>
+            <en><![CDATA[IBAN]]></en>
+        </locale>
+        <locale name="footer.box.company.bankBic">
+            <de><![CDATA[BIC]]></de>
+            <en><![CDATA[BIC]]></en>
+        </locale>
+        <locale name="footer.box.company.bankSwift">
+            <de><![CDATA[SWIFT]]></de>
+            <en><![CDATA[SWIFT]]></en>
+        </locale>
+        <locale name="footer.box.company.bankAccountNumber">
+            <de><![CDATA[Kto.]]></de>
+            <en><![CDATA[Account number]]></en>
+        </locale>
+        <locale name="footer.box.company.bankCode">
+            <de><![CDATA[BLZ]]></de>
+            <en><![CDATA[Bank code]]></en>
+        </locale>
+
         <locale name="title.invoice">
             <de><![CDATA[Rechnung]]></de>
             <en><![CDATA[Invoice]]></en>
