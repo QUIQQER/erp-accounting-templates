@@ -118,24 +118,24 @@
             <en><![CDATA[Bank details]]></en>
         </locale>
         <locale name="footer.box.company.bankIban">
-            <de><![CDATA[IBAN]]></de>
-            <en><![CDATA[IBAN]]></en>
+            <de><![CDATA[IBAN:]]></de>
+            <en><![CDATA[IBAN:]]></en>
         </locale>
         <locale name="footer.box.company.bankBic">
-            <de><![CDATA[BIC]]></de>
-            <en><![CDATA[BIC]]></en>
+            <de><![CDATA[BIC:]]></de>
+            <en><![CDATA[BIC:]]></en>
         </locale>
         <locale name="footer.box.company.bankSwift">
-            <de><![CDATA[SWIFT]]></de>
-            <en><![CDATA[SWIFT]]></en>
+            <de><![CDATA[SWIFT:]]></de>
+            <en><![CDATA[SWIFT:]]></en>
         </locale>
         <locale name="footer.box.company.bankAccountNumber">
-            <de><![CDATA[Kto.]]></de>
-            <en><![CDATA[Account number]]></en>
+            <de><![CDATA[Kto.:]]></de>
+            <en><![CDATA[Account number:]]></en>
         </locale>
         <locale name="footer.box.company.bankCode">
-            <de><![CDATA[BLZ]]></de>
-            <en><![CDATA[Bank code]]></en>
+            <de><![CDATA[BLZ:]]></de>
+            <en><![CDATA[Bank code:]]></en>
         </locale>
 
         <locale name="title.invoice">
