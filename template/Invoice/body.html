@@ -55,4 +55,8 @@
     {if $Payment->getInvoiceInformationText($this) !== ''}
     <br/>{$Payment->getInvoiceInformationText($this)}
     {/if}
+
+    {if !empty($globalInvoiceText)}
+    <br />{$globalInvoiceText}
+    {/if}
 </div>
