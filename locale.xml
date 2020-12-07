@@ -272,6 +272,68 @@
             <de><![CDATA[Offene Posten Liste]]></de>
             <en><![CDATA[Open Items List]]></en>
         </locale>
+        
+        <!-- SEPA mandate -->
+        <locale name="sepaMandate.title">
+            <de><![CDATA[SEPA-Lastschriftmandat]]></de>
+            <en><![CDATA[SEPA direct debit mandate]]></en>
+        </locale>
+        <locale name="sepaMandate.header.creditor">
+            <de><![CDATA[Gläubiger-Identifikationsnummer]]></de>
+            <en><![CDATA[Creditor Identifier]]></en>
+        </locale>
+        <locale name="sepaMandate.header.debtor">
+            <de><![CDATA[Mandatsreferenz]]></de>
+            <en><![CDATA[Mandate reference]]></en>
+        </locale>
+        <locale name="sepaMandate.info">
+            <de><![CDATA[
+<p>Hiermit ermächtige(n) ich/wir die [creditorCompany] widerruflich, Forderungen aus Dienstleistungen und Warenlieferungen von meinem/unserem Konto mittels SEPA-Lastschriftmandat zu begleichen.</p>
+<p>Wenn mein/unser Konto die erforderliche Deckung nicht aufweist, besteht seitens des Kontoführenden Kreditinstituts keine Verpflichtung zur Einlösung. Teileinlösungen werden nicht vorgenommen.</p>
+<p>Bei Rückbuchungen wegen falscher Kontoangaben, mangels Deckung oder aus anderen Gründen, die nicht durch Verschulden der [creditorCompany] zustande kommen, wird eine dafür anfallende Bearbeitungsgebühr in Höhe von EUR 15,00 von mir/uns übernommen.</p>
+]]></de>
+            <en><![CDATA[
+<p>I/we hereby revocably authorize [creditorCompany] to settle receivables from services and deliveries of goods from my/our account via SEPA Direct Debit Mandate.</p>
+<p>If my/our account does not have the required coverage, there is no obligation on the part of the account-keeping bank to redeem the money. Partial redemptions will not be made.</p>
+<p>In the case of chargebacks due to incorrect account details, lack of funds or for other reasons that are not the fault of [creditorCompany], a processing fee of EUR 15.00 will be paid by me/us.</p>
+]]></en>
+        </locale>
+        <locale name="sepaMandate.form.name">
+            <de><![CDATA[Name]]></de>
+            <en><![CDATA[Name]]></en>
+        </locale>
+        <locale name="sepaMandate.form.street">
+            <de><![CDATA[Straße]]></de>
+            <en><![CDATA[Street]]></en>
+        </locale>
+        <locale name="sepaMandate.form.city">
+            <de><![CDATA[PLZ / Stadt]]></de>
+            <en><![CDATA[ZIP / City]]></en>
+        </locale>
+        <locale name="sepaMandate.form.bank">
+            <de><![CDATA[Kreditinstitut]]></de>
+            <en><![CDATA[Financial institution]]></en>
+        </locale>
+        <locale name="sepaMandate.form.bic">
+            <de><![CDATA[BIC]]></de>
+            <en><![CDATA[BIC]]></en>
+        </locale>
+        <locale name="sepaMandate.form.iban">
+            <de><![CDATA[IBAN]]></de>
+            <en><![CDATA[IBAN]]></en>
+        </locale>
+        <locale name="sepaMandate.form.accountHolder" html="true">
+            <de><![CDATA[Kontoinhaber<br/>(falls abweichend)]]></de>
+            <en><![CDATA[Account holder<br/>(if different)]]></en>
+        </locale>
+        <locale name="sepaMandate.sign.place">
+            <de><![CDATA[Ort, Datum]]></de>
+            <en><![CDATA[Place, Date]]></en>
+        </locale>
+        <locale name="sepaMandate.sign.date">
+            <de><![CDATA[Unterschrift / Stempel]]></de>
+            <en><![CDATA[Signature / Stamp]]></en>
+        </locale>
 
     </groups>
 
