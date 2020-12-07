@@ -1,0 +1,98 @@
+<h1 class="sepa-mandate-header">
+    {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.title"}
+</h1>
+
+<div class="sepa-mandate-body">
+    <div class="sepa-mandate-body-reference">
+        <div class="sepa-mandate-body-reference-creditor">
+            <span class="sepa-mandate-body-reference-label">{locale group="quiqqer/erp-accounting-templates" var="sepaMandate.header.creditor"}</span>
+            {if empty($creditorId)}
+                <div class="sepa-mandate-line"></div>
+            {else}
+                {$creditorId}
+            {/if}
+        </div>
+        <div class="sepa-mandate-body-reference-debtor">
+            <span class="sepa-mandate-body-reference-label">{locale group="quiqqer/erp-accounting-templates" var="sepaMandate.header.debtor"}</span>
+            {if empty($debtorId)}
+                <div class="sepa-mandate-line"></div>
+            {else}
+                {$debtorId}
+            {/if}
+        </div>
+    </div>
+
+    {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.info" creditorCompany=$creditorCompany}
+
+    <table class="sepa-mandate-body-form">
+        <tbody>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.name"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.street"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.city"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.bank"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.bic"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.iban"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="sepa-mandate-body-form-label">
+                {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.form.accountHolder"}
+            </td>
+            <td>
+                <div class="sepa-mandate-line"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="sepa-mandate-body-sign">
+        <div class="sepa-mandate-body-sign-place">
+            <div class="sepa-mandate-line"></div>
+            {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.sign.place"}
+        </div>
+        <div class="sepa-mandate-body-sign-date">
+            <div class="sepa-mandate-line"></div>
+            {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.sign.date"}
+        </div>
+    </div>
+</div>
