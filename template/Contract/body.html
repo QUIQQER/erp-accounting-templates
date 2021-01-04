@@ -39,12 +39,7 @@
 </div>
 
 <div class="contract-additional">
-    {if empty($transaction)}
     {locale group="quiqqer/invoice" var="additional.invoice.text.timeForPayment"}: {$timeForPayment}
-    {else}
-    {$transaction}
-    {/if}
-
     <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
     <br/>{$this->getAttribute('additional_contract_text')}
 </div>
