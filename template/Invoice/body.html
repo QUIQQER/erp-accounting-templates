@@ -51,6 +51,20 @@
 </span>
 {/if}
 
+{if $this->getAttribute('order_date')}
+<p class="invoice-body-orderedBy">
+    {locale group="pcsg/erp-accounting-templates" var="body.orderDate"}:
+    {$this->formatDate($this->getAttribute('order_date'))}
+</p>
+{/if}
+
+{if $this->getAttribute('ordered_by_name')}
+<p class="invoice-body-orderedBy">
+    {locale group="pcsg/erp-accounting-templates" var="body.orderedBy"}:
+    {$this->getAttribute('ordered_by_name')}
+</p>
+{/if}
+
 <div class="invoice-articles">
     {$ArticleList->toHTML()}
 </div>
