@@ -11,9 +11,20 @@
     {if $Customer}
     {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
     {/if}
+
+    {if $this->getInvoice() &&
+        method_exists($this->getInvoice(), 'getData') &&
+        $this->getInvoice()->getData('contract')
+    }
+        {assign var=contract value=$this->getInvoice()->getData('contract')}
+        {locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}: {$contract.id}<br />
+    {/if}
+
     {if $Editor}
     {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
+
+
     {template_event name="quiqqer::erp-accounting-templates::invoiceDataEnd" InvoiceView=$this}
 
     {if $useShipping}
@@ -22,9 +33,9 @@
             {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:
         </span><br/>
         {if $DeliveryAddress}
-            {$DeliveryAddress->getDisplay()}
+        {$DeliveryAddress->getDisplay()}
         {else}
-            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
+        {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
         {/if}
     </div>
     {/if}
@@ -46,7 +57,7 @@
 
 <div class="invoice-additional">
     {if !empty($transaction)}
-        {$transaction}
+    {$transaction}
     {/if}
 
     <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
@@ -57,6 +68,6 @@
     {/if}
 
     {if !empty($globalInvoiceText)}
-    <br />{$globalInvoiceText}
+    <br/>{$globalInvoiceText}
     {/if}
 </div>
