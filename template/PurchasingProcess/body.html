@@ -1,0 +1,44 @@
+{if $Address}
+<div class="process-supplier">
+    <span class="process-supplier-header">
+        {locale group="quiqqer/erp-accounting-templates" var="header.supplier"}
+    </span>
+    {$Address->getDisplay()}
+</div>
+{/if}
+
+<div class="process-data">
+    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
+    {if $this->getAttribute('date')}
+    <br/>{locale group="quiqqer/erp-accounting-templates" var="body.date"}:
+    {$this->formatDate($this->getAttribute('date'))}
+    {/if}
+    {if $Editor}
+    <br/>{locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
+    {/if}
+
+    {if !empty($projectName)}
+    <br/><br/>{locale group="quiqqer/erp-accounting-templates" var="body.project" project=$projectName}
+    {/if}
+
+    {template_event name="quiqqer::erp-accounting-templates::processDataEnd" processView=$this}
+</div>
+
+<h1 class="process-header">
+    {locale group="quiqqer/erp-accounting-templates" var="title.purchasingProcess"}
+</h1>
+
+<div class="process-articles">
+    {$ArticleList->toHTML()}
+</div>
+
+<div class="process-additional">
+    <br/>{locale group="quiqqer/erp-accounting-templates" var="body.paymentMethod"}: {$paymentMethod}
+
+    {if !empty($this->getAttribute('payment_due_date'))}
+        <br/>{locale group="quiqqer/erp-accounting-templates" var="body.paymentDueDate"}:
+        {$this->formatDate($this->getAttribute('payment_due_date'))}
+    {/if}
+
+    <br/>{$this->getAttribute('additional_text')}
+</div>
