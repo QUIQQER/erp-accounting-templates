@@ -20,6 +20,7 @@ class Template implements OutputTemplateProviderInterface
     const ENTITY_TYPE_DUNNING                     = 'Dunning';
     const ENTITY_TYPE_OPEN_ITEMS_LIST             = 'OpenItemsList';
     const ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT = 'SEPADirectDebitAgreement';
+    const ENTITY_TYPE_PURCHASING_PROCESS          = 'PurchasingProcess';
 
     /**
      * Get all output types the template package provides templates for
@@ -36,7 +37,8 @@ class Template implements OutputTemplateProviderInterface
             self::ENTITY_TYPE_OFFER,
             self::ENTITY_TYPE_DUNNING,
             self::ENTITY_TYPE_OPEN_ITEMS_LIST,
-            self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT
+            self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT,
+            self::ENTITY_TYPE_PURCHASING_PROCESS
         ];
     }
 
@@ -57,6 +59,7 @@ class Template implements OutputTemplateProviderInterface
             case self::ENTITY_TYPE_DUNNING:
             case self::ENTITY_TYPE_OPEN_ITEMS_LIST:
             case self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT:
+            case self::ENTITY_TYPE_PURCHASING_PROCESS:
                 return ['system_default'];
         }
 

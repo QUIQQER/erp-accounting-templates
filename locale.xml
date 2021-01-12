@@ -339,6 +339,23 @@
             <en><![CDATA[Signature / Stamp]]></en>
         </locale>
 
+        <locale name="header.supplier">
+            <de><![CDATA[Lieferant]]></de>
+            <en><![CDATA[Supplier]]></en>
+        </locale>
+        <locale name="title.purchasingProcess">
+            <de><![CDATA[Einkauf]]></de>
+            <en><![CDATA[Purchasing]]></en>
+        </locale>
+        <locale name="body.paymentMethod">
+            <de><![CDATA[Zahlungsmethode]]></de>
+            <en><![CDATA[Payment method]]></en>
+        </locale>
+        <locale name="body.paymentDueDate">
+            <de><![CDATA[Zahlungsziel]]></de>
+            <en><![CDATA[Payment target]]></en>
+        </locale>
+
     </groups>
 
 </locales>
