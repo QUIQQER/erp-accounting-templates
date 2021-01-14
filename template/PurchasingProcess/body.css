@@ -16,6 +16,12 @@
     font-style: normal;
 }
 
+.process-supplier-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
 .process-data {
     float: right;
 }
@@ -28,10 +34,6 @@
 
 .process-header {
     clear: both;
-}
-
-.process-header-project {
-    float: right;
 }
 
 .articles-article {
@@ -53,6 +55,12 @@
 
 .delivery-address-label {
     font-weight: bold;
+}
+
+.process-header-project {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 /** header
