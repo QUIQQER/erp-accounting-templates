@@ -24,8 +24,8 @@
         </locale>
 
         <locale name="body.id">
-            <de><![CDATA[Beleg-Nummer]]></de>
-            <en><![CDATA[Document number]]></en>
+            <de><![CDATA[Beleg-Nr.]]></de>
+            <en><![CDATA[Document no.]]></en>
         </locale>
         <locale name="body.date">
             <de><![CDATA[Datum]]></de>
@@ -338,6 +338,10 @@
         <locale name="body.paymentDueDate">
             <de><![CDATA[Zahlungsziel]]></de>
             <en><![CDATA[Payment target]]></en>
+        </locale>
+        <locale name="body.supplier_invoice_no">
+            <de><![CDATA[Beleg-Nr. (Lieferant)]]></de>
+            <en><![CDATA[Document no. (supplier)]]></en>
         </locale>
 
     </groups>

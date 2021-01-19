@@ -8,7 +8,13 @@
 {/if}
 
 <div class="process-data">
-    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
+    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}
+    {if $this->getAttribute('supplier_invoice_no')}
+    <br/>{locale group="quiqqer/erp-accounting-templates" var="body.supplier_invoice_no"}: {$this->getAttribute('supplier_invoice_no')}
+    {/if}
+
+    <br/>
+
     {if $this->getAttribute('date')}
     <br/>{locale group="quiqqer/erp-accounting-templates" var="body.date"}:
     {$this->formatDate($this->getAttribute('date'))}
