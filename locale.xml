@@ -360,6 +360,11 @@
             <en><![CDATA[Document no. (supplier)]]></en>
         </locale>
 
+        <locale name="body.contract.id">
+            <de><![CDATA[Vertrags-Nr.]]></de>
+            <en><![CDATA[Contract no.]]></en>
+        </locale>
+
     </groups>
 
 </locales>
