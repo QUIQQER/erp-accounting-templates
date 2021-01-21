@@ -246,6 +246,19 @@
             <de><![CDATA[Projekt: [project]]]></de>
             <en><![CDATA[Project: [project]]]></en>
         </locale>
+        <locale name="body.orderedBy">
+            <de><![CDATA[Bestellt durch]]></de>
+            <en><![CDATA[Ordered by]]></en>
+        </locale>
+        <locale name="body.orderDate">
+            <de><![CDATA[Bestellt am]]></de>
+            <en><![CDATA[Ordered at]]></en>
+        </locale>
+        <locale name="body.contract.id">
+            <de><![CDATA[Vertrags-Nr.]]></de>
+            <en><![CDATA[Contract No.]]></en>
+        </locale>
+        
         <locale name="body.deliveryAddress">
             <de><![CDATA[Lieferadresse]]></de>
             <en><![CDATA[Delivery address]]></en>
