@@ -13,6 +13,9 @@
     {if $Editor}
     {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
+    {if !empty($contactPerson)}
+    {locale group="quiqqer/erp-accounting-templates" var="body.contactPerson"}: {$contactPerson}
+    {/if}
 </div>
 
 <h1 class="invoice-header">

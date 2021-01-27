@@ -361,6 +361,10 @@
             <de><![CDATA[Vertrags-Nr.]]></de>
             <en><![CDATA[Contract no.]]></en>
         </locale>
+        <locale name="body.contactPerson">
+            <de><![CDATA[Ansprechpartner]]></de>
+            <en><![CDATA[Contact person]]></en>
+        </locale>
 
     </groups>
 
