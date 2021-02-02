@@ -23,6 +23,10 @@
     <br/>{locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
     {/if}
 
+    {if !empty($contactPerson)}
+        <br/>{locale group="quiqqer/erp-accounting-templates" var="body.contactPerson"}: {$contactPerson}
+    {/if}
+
     {template_event name="quiqqer::erp-accounting-templates::processDataEnd" processView=$this}
 </div>
 
