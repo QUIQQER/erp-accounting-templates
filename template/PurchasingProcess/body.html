@@ -15,6 +15,10 @@
     <br/>{locale group="quiqqer/erp-accounting-templates" var="body.supplier_invoice_no"}: {$this->getAttribute('supplier_invoice_no')}
     {/if}
 
+    {if $Supplier && $Supplier->getAttribute('quiqqer.erp.supplier.supplier_customer_no')}
+    <br/>{locale group="quiqqer/erp-accounting-templates" var="body.supplier_customer_no"}: {$Supplier->getAttribute('quiqqer.erp.supplier.supplier_customer_no')}
+    {/if}
+
     <br/>
 
     {if $this->getAttribute('date')}

@@ -365,6 +365,10 @@
             <de><![CDATA[Ansprechpartner]]></de>
             <en><![CDATA[Contact person]]></en>
         </locale>
+        <locale name="body.supplier_customer_no">
+            <de><![CDATA[Kunden-Nr. b. Lieferant]]></de>
+            <en><![CDATA[Custerom no. at supplier]]></en>
+        </locale>
 
     </groups>
 
