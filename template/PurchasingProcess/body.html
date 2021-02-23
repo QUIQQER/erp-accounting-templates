@@ -1,11 +1,13 @@
-{if $Address}
 <div class="process-supplier">
     <span class="process-supplier-header">
         {locale group="quiqqer/erp-accounting-templates" var="header.supplier"}
     </span>
-    {$Address->getDisplay()}
+    {if $Address}
+        {$Address->getDisplay()}
+    {else}
+        {$Supplier->getName()}
+    {/if}
 </div>
-{/if}
 
 <div class="process-data">
     {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}
