@@ -1,0 +1,48 @@
+<div class="invoice-header invoice-header-top">
+    <div style="left: -16px; margin-top: 20px; margin-bottom: 20px; position: relative">
+        {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
+        {image image=$Logo height="120" svgtopng=1}
+    </div>
+
+    <div class="invoice-body-header-text">
+        &nbsp;{*locale group="quiqqer/erp-accounting-templates" var="header"*}
+    </div>
+
+    <div class="invoice-customer">
+        <p>{$company.name}</p>
+        <p>{$company.street}</p>
+        <p>{$company.zipCode} {$company.city}</p>
+    </div>
+
+    <div class="invoice-data">
+        <div class="invoice-data-highlight">
+            <h2>{locale group="quiqqer/erp-accounting-templates" var="sepaMandate.title"}</h2>
+
+            <div class="sepa-mandate-body-reference">
+                <div class="sepa-mandate-body-reference-creditor">
+                    <span class="sepa-mandate-body-reference-label">
+                        {locale group="quiqqer/erp-accounting-templates" var="sepaMandate.header.creditor"}
+                    </span>
+
+                    {if empty($creditorId)}
+                    <div class="sepa-mandate-line"></div>
+                    {else}
+                    <span class="value-id">
+                        <span>{$creditorId}</span>
+                    </span>
+                    {/if}
+                </div>
+                <div class="sepa-mandate-body-reference-debtor">
+                    <span class="sepa-mandate-body-reference-label">{locale group="quiqqer/erp-accounting-templates" var="sepaMandate.header.debtor"}</span>
+                    {if empty($debtorId)}
+                    <div class="sepa-mandate-line"></div>
+                    {else}
+                    <span class="value-id">
+                        <span>{$debtorId}</span>
+                    </span>
+                    {/if}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

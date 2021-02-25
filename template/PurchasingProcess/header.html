@@ -9,6 +9,9 @@
     </div>
 
     <div class="invoice-customer">
+        <h3>
+            {locale group="quiqqer/erp-accounting-templates" var="header.PurchasingProcess.supplier"}
+        </h3>
         {if $Address}
         {$Address->getDisplay()}
         {/if}
@@ -16,20 +19,26 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice"}</h2>
+            <h2>{locale group="quiqqer/erp-accounting-templates" var="header.PurchasingProcess.title"}</h2>
             <table>
                 <tbody>
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.id"}</td>
                     <td class="value-id"><span>{$this->getId()}</span></td>
                 </tr>
+                {if $this->getAttribute('supplier_invoice_no')}
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.supplier_invoice_no"}</td>
+                    <td class="value-id"><span>{$this->getAttribute('supplier_invoice_no')}</span></td>
+                </tr>
+                {/if}
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.date"}</td>
                     <td class="value-date"><span>{$dateFormatted}</span></td>
                 </tr>
                 {if $Customer}
                 <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.customerId"}</td>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="header.PurchasingProcess.supplierId"}</td>
                     {if $Customer->getAttribute('customerId')}
                     <td class="value-customer"><span>{$Customer->getAttribute('customerId')}</span></td>
                     {else}

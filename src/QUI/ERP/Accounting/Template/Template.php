@@ -12,22 +12,22 @@ class Template implements OutputTemplateProviderInterface
     /**
      * Entity types
      */
-    const ENTITY_TYPE_CANCELLED                   = 'Canceled';
-    const ENTITY_TYPE_CONTRACT                    = 'Contract';
-    const ENTITY_TYPE_CREDIT_NOTE                 = 'CreditNote';
-    const ENTITY_TYPE_INVOICE                     = 'Invoice';
-    const ENTITY_TYPE_OFFER                       = 'Offer';
-    const ENTITY_TYPE_DUNNING                     = 'Dunning';
-    const ENTITY_TYPE_OPEN_ITEMS_LIST             = 'OpenItemsList';
+    const ENTITY_TYPE_CANCELLED = 'Canceled';
+    const ENTITY_TYPE_CONTRACT = 'Contract';
+    const ENTITY_TYPE_CREDIT_NOTE = 'CreditNote';
+    const ENTITY_TYPE_INVOICE = 'Invoice';
+    const ENTITY_TYPE_OFFER = 'Offer';
+    const ENTITY_TYPE_DUNNING = 'Dunning';
+    const ENTITY_TYPE_OPEN_ITEMS_LIST = 'OpenItemsList';
     const ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT = 'SEPADirectDebitAgreement';
-    const ENTITY_TYPE_PURCHASING_PROCESS          = 'PurchasingProcess';
+    const ENTITY_TYPE_PURCHASING_PROCESS = 'PurchasingProcess';
 
     /**
      * Get all output types the template package provides templates for
      *
      * @return string[]
      */
-    public static function getEntityTypes()
+    public static function getEntityTypes(): array
     {
         return [
             self::ENTITY_TYPE_CANCELLED,
@@ -48,7 +48,7 @@ class Template implements OutputTemplateProviderInterface
      * @param string $entityType
      * @return string[]|int[] - Collection of templateIds
      */
-    public static function getTemplates(string $entityType)
+    public static function getTemplates(string $entityType): array
     {
         switch ($entityType) {
             case self::ENTITY_TYPE_CANCELLED:
@@ -70,10 +70,10 @@ class Template implements OutputTemplateProviderInterface
      * Get title of Template
      *
      * @param string|int $templateId
-     * @param Locale $Locale (optional) - If omitted use \QUI::getLocale()
+     * @param Locale|null $Locale (optional) - If omitted use \QUI::getLocale()
      * @return string
      */
-    public static function getTemplateTitle($templateId, Locale $Locale = null)
+    public static function getTemplateTitle($templateId, Locale $Locale = null): string
     {
         if (empty($Locale)) {
             $Locale = QUI::getLocale();
@@ -112,6 +112,58 @@ class Template implements OutputTemplateProviderInterface
             $output .= '<style>'.\file_get_contents($tplDir.'header.css').'</style>';
         }
 
+        $Instance  = $Engine->getTemplateVariable('this');
+        $Formatter = QUI::getLocale()->getDateFormatter();
+
+        switch ($entityType) {
+            case self::ENTITY_TYPE_DUNNING:
+            case self::ENTITY_TYPE_OFFER:
+                break;
+
+            case self::ENTITY_TYPE_CANCELLED:
+            case self::ENTITY_TYPE_CREDIT_NOTE:
+            case self::ENTITY_TYPE_INVOICE:
+                $date = $Instance->getInvoice()->getAttribute('date');
+                $date = \strtotime($date);
+                $date = $Formatter->format($date);
+
+                $Engine->assign('dateFormatted', $date);
+
+                //@todo sub header
+
+                break;
+
+            case self::ENTITY_TYPE_CONTRACT:
+                $Engine->assign('dateFormatted', $Instance->getDate());
+                break;
+
+            case self::ENTITY_TYPE_OPEN_ITEMS_LIST:
+                $OpenItemsList = $Engine->getTemplateVariable('OpenItemsList');
+                $Engine->assign('dateFormatted', $OpenItemsList->getDateFormatted());
+                break;
+
+            case self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT:
+                $Package = QUI::getPackage('quiqqer/erp');;
+                $Engine->assign('company', $Package->getConfig()->getSection('company'));
+                break;
+
+            case self::ENTITY_TYPE_PURCHASING_PROCESS:
+                $Engine->assign('Customer', $Instance->getSupplier());
+
+                $data = $Instance->toArray();
+                $Engine->assign('dateFormatted', $data['date']);
+
+                if (!empty($data['payment_method'])) {
+                    $Engine->assign('Payment', QUI\ERP\Accounting\Payments\Payments::getInstance()->getPayment(
+                        $data['payment_method']
+                    ));
+                } else {
+                    $Engine->assign('Payment', false);
+                }
+
+                break;
+        }
+
         $output .= $Engine->fetch($htmlFile);
 
         return $output;
@@ -130,6 +182,7 @@ class Template implements OutputTemplateProviderInterface
      */
     public static function getBodyHtml($templateId, string $entityType, EngineInterface $Engine, $Entity)
     {
+        $tplDir     = self::getTemplateDir();
         $tplTypeDir = self::getTemplateDir().$entityType.'/';
         $htmlFile   = $tplTypeDir.'body.html';
 
@@ -141,6 +194,8 @@ class Template implements OutputTemplateProviderInterface
 
         if (\file_exists($tplTypeDir.'body.css')) {
             $output .= '<style>'.\file_get_contents($tplTypeDir.'body.css').'</style>';
+        } else {
+            $output .= '<style>'.\file_get_contents($tplDir.'body.css').'</style>';
         }
 
         $output .= $Engine->fetch($htmlFile);
@@ -198,7 +253,7 @@ class Template implements OutputTemplateProviderInterface
      *
      * @throws QUI\Exception
      */
-    protected static function getTemplateDir()
+    protected static function getTemplateDir(): string
     {
         return QUI::getPackage('quiqqer/erp-accounting-templates')->getDir().'template/';
     }

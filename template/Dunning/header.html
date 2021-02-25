@@ -16,16 +16,16 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice"}</h2>
+            <h2>{$Dunning->getDunningLevel()->getTitle()}</h2>
             <table>
                 <tbody>
                 <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.id"}</td>
-                    <td class="value-id"><span>{$this->getId()}</span></td>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="dunning.label.invoice_id"}</td>
+                    <td class="value-id"><span>{$Invoice->getId()}</span></td>
                 </tr>
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.date"}</td>
-                    <td class="value-date"><span>{$dateFormatted}</span></td>
+                    <td class="value-date"><span>{$Dunning->getCreateDateFormatted()}</span></td>
                 </tr>
                 {if $Customer}
                 <tr>
@@ -44,12 +44,11 @@
                 </tr>
                 {/if}
 
-                {if method_exists($this, 'getInvoice') &&
-                $this->getInvoice() &&
-                method_exists($this->getInvoice(), 'getData') &&
-                $this->getInvoice()->getData('contract')
+                {if isset($Invoice) && $Invoice &&
+                    method_exists($Invoice, 'getData') &&
+                    $Invoice->getData('contract')
                 }
-                {assign var=contract value=$this->getInvoice()->getData('contract')}
+                {assign var=contract value=$Invoice->getData('contract')}
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}</td>
                     <td class="value-contract-id"><span>{$contract.id}</span></td>

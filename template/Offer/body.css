@@ -6,42 +6,31 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.offer-header-project {
-    float: right;
+.offer-body {
+    padding: 10px 30px 0 70px;
+    width: 230mm;
 }
 
-.offer-articles {
-    margin-top: 60px;
-    width: 100%;
-}
+/** Extra Data
+ ===================================== */
 
-.offer-customer address {
+.offer-body-extra {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-style: normal;
-}
-
-.offer-data {
-    float: right;
-}
-
-.offer-additional {
-    clear: both;
-    float: left;
-    margin-top: 40px;
-}
-
-.offer-header {
-    border-bottom: 1px solid #DEDEDE;
-    clear: both;
-    display: inline-block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0 0 10px 0;
+    font-size: 14px;
     margin-bottom: 20px;
-    width: 100%;
 }
+
+.offer-body-extra p {
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/** Articles
+ ========================================== */
 
 .articles-article {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #d6d6d6;
     margin-top: 20px;
     width: 100%;
 
@@ -50,39 +39,47 @@
 }
 
 .articles-header {
-    font-size: 20px;
-}
-
-.offer-tos {
-    font-size: 12px;
-    margin-top: 20px;
-    width: 400px;
-}
-
-.offer-delivery-address {
-    margin: 40px 0 0 0;
-}
-
-.offer-delivery-address-label {
-    font-weight: bold;
+    display: none;
 }
 
 /** header
  ========================================== */
 
+.articles-article {
+    border-bottom: 1px solid #666;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0;
+}
+
+.articles-article thead {
+    padding: 0;
+}
+
+.articles-article thead th {
+    background: #d6d6d6;
+    white-space: nowrap;
+}
+
 .articles-article-header {
-    color: #999999;
+    color: #1b1b1b;
     font-size: 12px;
     line-height: 30px;
+}
+
+.articles-article-header-articleNo {
+    padding-left: 7px;
+    text-align: left;
 }
 
 .articles-article-header-pos,
 .articles-article-header-quantity {
     text-align: center;
-    width: 100px;
+    width: 50px;
 }
 
 .articles-article-header-information {
+    padding-left: 7px;
     text-align: left;
 }
 
@@ -91,19 +88,32 @@
     text-align: right;
 }
 
-/** articles
+.articles-article-header-price {
+    padding-right: 10px;
+}
+
+/** one article
  ========================================== */
+
+.articles-article tbody td {
+    vertical-align: top;
+    font-size: 0.8rem;
+    padding: 7px;
+}
+
+.articles-article tbody tr:nth-child(even) {
+    background: #e5e5e5;
+}
 
 .articles-article-pos,
 .articles-article-quantity,
-.articles-article-articleNo,
 .articles-article-vat {
     text-align: center;
     vertical-align: top;
 }
 
 .articles-article-information-title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -113,20 +123,31 @@
     vertical-align: top;
 }
 
+.articles-article-information-description p {
+    margin-bottom: 5px !important;
+}
+
 .articles-article-unitprice {
     text-align: right;
     vertical-align: top;
 }
 
+.articles-article-unitprice-discount {
+    clear: both;
+    display: block;
+    font-size: 10px;
+}
+
 .articles-article-price {
-    /*color: #e91d2c;*/
     text-align: right;
     vertical-align: top;
+    padding-right: 10px !important;
 }
 
 .articles-article p {
     margin: 0;
 }
+
 
 /** sum
  ========================================== */
@@ -145,10 +166,69 @@
     border-bottom: 1px solid #999999;
 }
 
+.articles-sum-row-sum {
+    font-weight: bold;
+}
+
 .articles-sum-row-sum-text {
     border-bottom: 3px double #999999;
 }
 
 .articles-sum-row-sum-value {
     border-bottom: 3px double #999999;
+}
+
+.articles-sum td + td {
+    padding-right: 10px;
+}
+
+.invoice-additional-left {
+    float: left;
+    width: 40%;
+}
+
+.additional-invoice-value {
+    font-weight: bold;
+}
+
+
+/** additional
+ ========================================== */
+
+.offer-additional {
+    clear: both;
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.offer-additional-left {
+    float: left;
+    width: 40%;
+}
+
+.offer-additional-global-invoice-text {
+    float: right;
+    width: 60%;
+}
+
+.additional-offer-value {
+    font-weight: bold;
+}
+
+.offer-additional-bottom {
+    clear: both;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.offer-additional-global-footer-extra {
+    clear: both;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px !important;
+    text-align: center;
+    width: 100%;
 }

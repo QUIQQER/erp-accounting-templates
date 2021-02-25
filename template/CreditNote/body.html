@@ -1,29 +1,37 @@
-<div class="invoice-customer">
-    {if $Address}
-    {$Address->getDisplay()}
-    {/if}
-</div>
+<div class="invoice-body">
+    <div class="invoice-body-extra">
+        {if !empty($projectName)}
+        <p class="invoice-body-project">
+            {locale group="quiqqer/erp-accounting-templates" var="body.project"}: {$projectName}
+        </p>
+        {/if}
 
+        {if $this->getAttribute('order_date')}
+        <p class="invoice-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="body.orderDate"}:
+            {$this->formatDate($this->getAttribute('order_date'))}
+        </p>
+        {/if}
 
-<div class="invoice-data">
-    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
-    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$this->getAttribute('date')}<br/>
-    {if $Customer}
-    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
-    {/if}
-    {if $Editor}
-    {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
-    {/if}
-</div>
+        {if $this->getAttribute('contact_person')}
+        <p class="invoice-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="body.orderedBy"}:
+            {$this->getAttribute('contact_person')}
+        </p>
+        {/if}
+    </div>
 
-<h1 class="invoice-header">
-    {locale group="quiqqer/erp-accounting-templates" var="title.creditNote"}
-</h1>
+    {template_event name="quiqqer::erp-accounting-templates::invoiceDataEnd" InvoiceView=$this}
 
-<div class="invoice-articles">
-    {$ArticleList->toHTML()}
-</div>
+    <div class="invoice-articles">
+        {$ArticleList->toHTML()}
+    </div>
 
-<div class="invoice-additional">
-    {$this->getAttribute('additional_invoice_text')}
+    <div class="invoice-additional">
+        {if !empty($this->getAttribute('additional_invoice_text'))}
+        <div class="invoice-additional-bottom">
+            {$this->getAttribute('additional_invoice_text')}
+        </div>
+        {/if}
+    </div>
 </div>

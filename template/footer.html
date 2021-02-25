@@ -6,7 +6,8 @@
 
     <div class="invoice-footer-container">
         <header class="invoice-footer-companyName">
-        {if $Config->get('company', 'name')}{$Config->get('company', 'name')}{/if}
+            {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
+            {image image=$Logo height="120" svgtopng=1}
         </header>
         <ul>
             {if $Config->get('company', 'street')}
@@ -27,23 +28,13 @@
             </li>
             {/if}
         </ul>
-
-        {if $Config->get('company', 'owner')}
-        <header class="invoice-footer-companyOwner">
-            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.owner.title"}
-        </header>
-        <ul>
-            <li>
-                {$Config->get('company', 'owner')}
-            </li>
-        </ul>
-        {/if}
     </div>
 
     <div class="invoice-footer-container">
         <header>
             {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.title"}
         </header>
+
 
         <table>
             <tbody>
@@ -77,6 +68,7 @@
             {/if}
             </tbody>
         </table>
+
     </div>
 
     <div class="invoice-footer-container">
@@ -104,9 +96,21 @@
             </li>
             {/if}
         </ul>
+
+        {if $Config->get('company', 'owner')}
+        <header class="invoice-footer-companyOwner">
+            {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.owner.title"}
+        </header>
+        <ul>
+            <li>
+                {$Config->get('company', 'owner')}
+            </li>
+        </ul>
+        {/if}
     </div>
 
     <div class="invoice-footer-container">
+
         <header>
             {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bank.title"}
         </header>

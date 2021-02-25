@@ -1,3 +1,19 @@
+.sepa-mandate-body-reference {
+    display: inline-block;
+    float: inherit !important;
+    margin: 0;
+    width: 100%;
+}
+
+.sepa-mandate-body-reference-creditor {
+    margin-bottom: 10px !important;
+}
+
+.sepa-mandate-body-reference-label {
+    display: inline-block !important;
+    margin-bottom: 5px !important;
+}
+
 .invoice-header {
     border-bottom: 1px solid #d6d6d6;
     display: inline-block;
@@ -25,6 +41,10 @@
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 50%;
+}
+
+.invoice-customer p {
+    margin: 0 0 5px 0;
 }
 
 .invoice-data {
@@ -90,6 +110,7 @@
     width: 35%;
 }
 
+.value-id span,
 .invoice-data-highlight td span {
     background: #fff;
     border-radius: 3px;
@@ -97,6 +118,11 @@
     margin: 0 0 2px;
     padding: 0 10px;
     width: 200px;
+}
+
+.value-id span {
+    padding: 2px 10px;
+    width: 305px;
 }
 
 .invoice-customer h3 {

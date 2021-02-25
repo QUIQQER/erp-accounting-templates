@@ -1,24 +1,40 @@
+.sepa-mandate-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0 30px 0 70px;
+    width: 230mm;
+}
+
+
+.sepa-mandate-body {
+    font-size: 14px;
+}
+
 .sepa-mandate-body-reference {
     float: left;
-    margin: 40px 0 35px 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
     width: 100%;
 }
 
 .sepa-mandate-body-reference-creditor,
 .sepa-mandate-body-reference-debtor {
-    float: left;
-    width: 50%;
+    display: block;
+    width: 100%;
+}
+
+.sepa-mandate-body-reference-creditor {
+    margin-bottom: 10px;
 }
 
 .sepa-mandate-body-reference-label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .sepa-mandate-body-form {
     border-spacing: 0 20px;
-    margin: 20px 0 0 0;
+    font-size: 14px;
+    margin: 0 0 0 0;
     width: 100%;
 }
 
@@ -43,6 +59,6 @@
 
 .sepa-mandate-body-sign {
     float: left;
-    margin-top: 100px;
+    margin-top: 80px;
     width: 100%;
 }

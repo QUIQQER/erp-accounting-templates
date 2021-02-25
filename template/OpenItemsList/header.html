@@ -1,0 +1,41 @@
+<div class="invoice-header invoice-header-top">
+    <div style="left: -16px; margin-top: 20px; margin-bottom: 20px; position: relative">
+        {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
+        {image image=$Logo height="120" svgtopng=1}
+    </div>
+
+    <div class="invoice-body-header-text">
+        {locale group="quiqqer/erp-accounting-templates" var="header"}
+    </div>
+
+    <div class="invoice-customer">
+        {if $Address}
+        {$Address->getDisplay()}
+        {/if}
+    </div>
+
+    <div class="invoice-data">
+        <div class="invoice-data-highlight">
+            <h2>{locale group="quiqqer/erp-accounting-templates" var="OpenItemsList.title"}</h2>
+            <table>
+                <tbody>
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.date"}</td>
+                    <td class="value-date"><span>{$dateFormatted}</span></td>
+                </tr>
+                {if $Customer}
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.customerId"}</td>
+                    {if $Customer->getAttribute('customerId')}
+                    <td class="value-customer"><span>{$Customer->getAttribute('customerId')}</span></td>
+                    {else}
+                    <td class="value-customer"><span>{$Customer->getId()}</span></td>
+                    {/if}
+                </tr>
+                {/if}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

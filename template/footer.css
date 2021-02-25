@@ -1,15 +1,17 @@
 .invoice-footer {
+    border-top: 1px solid #d6d6d6;
     clear: both;
     display: inline-block;
-    height: 50mm;
+    margin-top: 20px;
+    margin-left: 70px;
     position: absolute;
-    top: 10mm;
-    /*margin-top: 30px;*/
-    width: 100%;
+    top: 0;
+    width: 230mm;
 }
 
 .invoice-footer-container {
     float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     width: 25%;
     line-height: 18px;
@@ -25,10 +27,6 @@
     font-weight: bold;
     margin-top: 4px;
     margin-bottom: 4px;
-}
-
-.invoice-footer-container .invoice-footer-companyName {
-    font-size: 14px;
 }
 
 .invoice-footer-container .invoice-footer-companyOwner {
@@ -47,7 +45,16 @@
     padding-right: 5px;
 }
 
+.invoice-footer-companyName img {
+    height: 58px;
+    position: relative;
+    left: -7px;
+}
+
 #pages {
-    top: 55mm;
+    font-size: 0.75rem;
     position: absolute;
+    right: 30px;
+    top: 45mm;
+    white-space: nowrap;
 }

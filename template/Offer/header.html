@@ -1,7 +1,6 @@
 <div class="invoice-header invoice-header-top">
     <div style="left: -16px; margin-top: 20px; margin-bottom: 20px; position: relative">
-        {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
-        {image image=$Logo height="120" svgtopng=1}
+        {image image=$Project->getMedia()->getLogoImage() height="120" svgtopng=1}
     </div>
 
     <div class="invoice-body-header-text">
@@ -16,16 +15,17 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice"}</h2>
+            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.offer"}</h2>
+
             <table>
                 <tbody>
                 <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.id"}</td>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="offer.body.id"}</td>
                     <td class="value-id"><span>{$this->getId()}</span></td>
                 </tr>
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.date"}</td>
-                    <td class="value-date"><span>{$dateFormatted}</span></td>
+                    <td class="value-date"><span>{$offerDate}</span></td>
                 </tr>
                 {if $Customer}
                 <tr>
@@ -43,23 +43,11 @@
                     <td class="value-editor-customer"><span>{$Editor->getName()}</span></td>
                 </tr>
                 {/if}
-
-                {if method_exists($this, 'getInvoice') &&
-                $this->getInvoice() &&
-                method_exists($this->getInvoice(), 'getData') &&
-                $this->getInvoice()->getData('contract')
-                }
-                {assign var=contract value=$this->getInvoice()->getData('contract')}
-                <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}</td>
-                    <td class="value-contract-id"><span>{$contract.id}</span></td>
-                </tr>
-                {/if}
                 </tbody>
             </table>
         </div>
 
-        {if isset($useShipping) && $useShipping && $DeliveryAddress && $DeliveryAddress->getText() !== ''}
+        {if $useShipping && $DeliveryAddress && $DeliveryAddress->getText() !== ''}
         <div class="delivery-address">
             <span class="delivery-address-label">
                 {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:

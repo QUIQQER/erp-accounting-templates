@@ -1,87 +1,57 @@
-<div class="invoice-customer">
-    {if $Address}
-    {$Address->getDisplay()}
-    {/if}
-</div>
+<div class="invoice-body">
+    <div class="invoice-body-extra">
+        {if !empty($projectName)}
+        <p class="invoice-body-project">
+            {locale group="quiqqer/erp-accounting-templates" var="body.project"}: {$projectName}
+        </p>
+        {/if}
 
+        {if $this->getAttribute('order_date')}
+        <p class="invoice-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="body.orderDate"}:
+            {$this->formatDate($this->getAttribute('order_date'))}
+        </p>
+        {/if}
 
-<div class="invoice-data">
-    {locale group="quiqqer/erp-accounting-templates" var="body.id"}: {$this->getId()}<br/>
-    {locale group="quiqqer/erp-accounting-templates" var="body.date"}: {$this->getAttribute('date')}<br/>
-    {if $Customer}
-    {locale group="quiqqer/erp-accounting-templates" var="body.customerId"}: {$Customer->getId()}<br/>
-    {/if}
-
-    {if $this->getInvoice() &&
-        method_exists($this->getInvoice(), 'getData') &&
-        $this->getInvoice()->getData('contract')
-    }
-        {assign var=contract value=$this->getInvoice()->getData('contract')}
-        {locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}: {$contract.id}<br />
-    {/if}
-
-    {if $Editor}
-    {locale group="quiqqer/erp-accounting-templates" var="body.editor"}: {$Editor->getName()}
-    {/if}
-
+        {if $this->getAttribute('contact_person')}
+        <p class="invoice-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="body.orderedBy"}:
+            {$this->getAttribute('contact_person')}
+        </p>
+        {/if}
+    </div>
 
     {template_event name="quiqqer::erp-accounting-templates::invoiceDataEnd" InvoiceView=$this}
 
-    {if $useShipping}
-    <div class="delivery-address">
-        <span class="delivery-address-label">
-            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:
-        </span><br/>
-        {if $DeliveryAddress}
-        {$DeliveryAddress->getDisplay()}
-        {else}
-        {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
+    <div class="invoice-articles">
+        {$ArticleList->toHTML()}
+    </div>
+
+    <div class="invoice-additional">
+        <div class="invoice-additional-left">
+            {if !empty($transaction)}
+            {$transaction}
+            {/if}
+
+            <br/>
+            <span class="additional-invoice-title">{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}:</span>
+            <span class="additional-invoice-value">{$Payment->getTitle()}</span>
+
+            {if $Payment->getInvoiceInformationText($this) !== ''}
+            <br/>{$Payment->getInvoiceInformationText($this)}
+            {/if}
+        </div>
+
+        {if !empty($globalInvoiceText)}
+        <div class="invoice-additional-global-invoice-text">
+            {$globalInvoiceText}
+        </div>
+        {/if}
+
+        {if !empty($this->getAttribute('additional_invoice_text'))}
+        <div class="invoice-additional-bottom">
+            {$this->getAttribute('additional_invoice_text')}
+        </div>
         {/if}
     </div>
-    {/if}
-</div>
-
-<h1 class="invoice-header">
-    {locale group="quiqqer/erp-accounting-templates" var="title.invoice"}
-</h1>
-
-{if !empty($projectName)}
-<span class="invoice-header-project">
-    {locale group="quiqqer/erp-accounting-templates" var="body.project" project=$projectName}
-</span>
-{/if}
-
-{if $this->getAttribute('order_date')}
-<p class="invoice-body-orderedBy">
-    {locale group="quiqqer/erp-accounting-templates" var="body.orderDate"}:
-    {$this->formatDate($this->getAttribute('order_date'))}
-</p>
-{/if}
-
-{if $this->getAttribute('ordered_by_name')}
-<p class="invoice-body-orderedBy">
-    {locale group="quiqqer/erp-accounting-templates" var="body.orderedBy"}:
-    {$this->getAttribute('ordered_by_name')}
-</p>
-{/if}
-
-<div class="invoice-articles">
-    {$ArticleList->toHTML()}
-</div>
-
-<div class="invoice-additional">
-    {if !empty($transaction)}
-    {$transaction}
-    {/if}
-
-    <br/>{locale group="quiqqer/invoice" var="additional.invoice.text.paymentMethod"}: {$Payment->getTitle()}
-    <br/>{$this->getAttribute('additional_invoice_text')}
-
-    {if $Payment->getInvoiceInformationText($this) !== ''}
-    <br/>{$Payment->getInvoiceInformationText($this)}
-    {/if}
-
-    {if !empty($globalInvoiceText)}
-    <br/>{$globalInvoiceText}
-    {/if}
 </div>
