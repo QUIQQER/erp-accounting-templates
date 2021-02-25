@@ -25,7 +25,7 @@
 
         <locale name="body.id">
             <de><![CDATA[Beleg-Nr.]]></de>
-            <en><![CDATA[Document no.]]></en>
+            <en><![CDATA[Document No.]]></en>
         </locale>
         <locale name="body.date">
             <de><![CDATA[Datum]]></de>
@@ -40,8 +40,20 @@
             <en><![CDATA[Editor]]></en>
         </locale>
         <locale name="body.project">
-            <de><![CDATA[Projekt: [project]]]></de>
-            <en><![CDATA[Project: [project]]]></en>
+            <de><![CDATA[Projekt]]></de>
+            <en><![CDATA[Project]]></en>
+        </locale>
+        <locale name="body.orderedBy">
+            <de><![CDATA[Bestellt durch]]></de>
+            <en><![CDATA[Ordered by]]></en>
+        </locale>
+        <locale name="body.orderDate">
+            <de><![CDATA[Bestellt am]]></de>
+            <en><![CDATA[Ordered at]]></en>
+        </locale>
+        <locale name="body.contract.id">
+            <de><![CDATA[Vertrags-Nr.]]></de>
+            <en><![CDATA[Contract No.]]></en>
         </locale>
 
         <locale name="footer.top.box" html="true">
@@ -153,8 +165,8 @@
 
         <!-- Contracts -->
         <locale name="title.contract">
-            <de><![CDATA[Vertrag]]></de>
-            <en><![CDATA[Contract]]></en>
+            <de><![CDATA[Vertragsbestätigung]]></de>
+            <en><![CDATA[Contract confirmation]]></en>
         </locale>
         <locale name="contract.body.id">
             <de><![CDATA[Vertrags-Nr.]]></de>
@@ -235,8 +247,10 @@
             <en><![CDATA[Non-binding offer.]]></en>
         </locale>
         <locale name="offer.body.tos_hint">
-            <de><![CDATA[Es gelten unsere allgemeinen Verkaufs-, Lieferungs- und Zahlungsbedingungen. Sämtliche Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.]]></de>
-            <en><![CDATA[Our general terms of sale, delivery and payment apply. All goods remain our property until full payment has been received.]]></en>
+            <de>
+                <![CDATA[Es gelten unsere allgemeinen Verkaufs-, Lieferungs- und Zahlungsbedingungen. Sämtliche Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.]]></de>
+            <en>
+                <![CDATA[Our general terms of sale, delivery and payment apply. All goods remain our property until full payment has been received.]]></en>
         </locale>
         <locale name="offer.body.valid_to" html="true">
             <de><![CDATA[Dieses Angebot ist gültig bis zum <b>[date]</b>.]]></de>
@@ -246,19 +260,6 @@
             <de><![CDATA[Projekt: [project]]]></de>
             <en><![CDATA[Project: [project]]]></en>
         </locale>
-        <locale name="body.orderedBy">
-            <de><![CDATA[Bestellt durch]]></de>
-            <en><![CDATA[Ordered by]]></en>
-        </locale>
-        <locale name="body.orderDate">
-            <de><![CDATA[Bestellt am]]></de>
-            <en><![CDATA[Ordered at]]></en>
-        </locale>
-        <locale name="body.contract.id">
-            <de><![CDATA[Vertrags-Nr.]]></de>
-            <en><![CDATA[Contract No.]]></en>
-        </locale>
-        
         <locale name="body.deliveryAddress">
             <de><![CDATA[Lieferadresse]]></de>
             <en><![CDATA[Delivery address]]></en>
@@ -271,7 +272,7 @@
             <de><![CDATA[Anfrage vom]]></de>
             <en><![CDATA[Inquiry from]]></en>
         </locale>
-        
+
         <locale name="dunning.label.invoice_id">
             <de><![CDATA[In Bezug auf Rechnung]]></de>
             <en><![CDATA[Concerning invoice]]></en>
@@ -285,7 +286,11 @@
             <de><![CDATA[Offene Posten Liste]]></de>
             <en><![CDATA[Open Items List]]></en>
         </locale>
-        
+        <locale name="dunning.label.invoice_id">
+            <de><![CDATA[In Bezug auf Rechnung]]></de>
+            <en><![CDATA[Concerning invoice]]></en>
+        </locale>
+
         <!-- SEPA mandate -->
         <locale name="sepaMandate.title">
             <de><![CDATA[SEPA-Lastschriftmandat]]></de>
@@ -298,6 +303,18 @@
         <locale name="sepaMandate.header.debtor">
             <de><![CDATA[Mandatsreferenz]]></de>
             <en><![CDATA[Mandate reference]]></en>
+        </locale>
+        <locale name="sepaMandate.info">
+            <de><![CDATA[
+<p>Hiermit ermächtige(n) ich/wir die [creditorCompany] widerruflich, Forderungen aus Dienstleistungen und Warenlieferungen von meinem/unserem Konto mittels SEPA-Lastschriftmandat zu begleichen.</p>
+<p>Wenn mein/unser Konto die erforderliche Deckung nicht aufweist, besteht seitens des Kontoführenden Kreditinstituts keine Verpflichtung zur Einlösung. Teileinlösungen werden nicht vorgenommen.</p>
+<p>Bei Rückbuchungen wegen falscher Kontoangaben, mangels Deckung oder aus anderen Gründen, die nicht durch Verschulden der [creditorCompany] zustande kommen, wird eine dafür anfallende Bearbeitungsgebühr in Höhe von EUR 15,00 von mir/uns übernommen.</p>
+]]></de>
+            <en><![CDATA[
+<p>I/we hereby revocably authorize [creditorCompany] to settle receivables from services and deliveries of goods from my/our account via SEPA Direct Debit Mandate.</p>
+<p>If my/our account does not have the required coverage, there is no obligation on the part of the account-keeping bank to redeem the money. Partial redemptions will not be made.</p>
+<p>In the case of chargebacks due to incorrect account details, lack of funds or for other reasons that are not the fault of [creditorCompany], a processing fee of EUR 15.00 will be paid by me/us.</p>
+]]></en>
         </locale>
         <locale name="sepaMandate.form.name">
             <de><![CDATA[Name]]></de>
@@ -336,38 +353,42 @@
             <en><![CDATA[Signature / Stamp]]></en>
         </locale>
 
-        <locale name="header.supplier">
-            <de><![CDATA[Lieferant]]></de>
-            <en><![CDATA[Supplier]]></en>
-        </locale>
-        <locale name="title.purchasingProcess">
-            <de><![CDATA[Einkauf]]></de>
-            <en><![CDATA[Purchasing]]></en>
-        </locale>
-        <locale name="body.paymentMethod">
-            <de><![CDATA[Zahlungsmethode]]></de>
-            <en><![CDATA[Payment method]]></en>
-        </locale>
-        <locale name="body.paymentDueDate">
-            <de><![CDATA[Zahlungsziel]]></de>
-            <en><![CDATA[Payment target]]></en>
-        </locale>
-        <locale name="body.supplier_invoice_no">
-            <de><![CDATA[Beleg-Nr. (Lieferant)]]></de>
-            <en><![CDATA[Document no. (supplier)]]></en>
+        <locale name="offer.footer.extra" html="true">
+            <de><![CDATA[
+            Um das Angebot anzunehmen, senden Sie es bitte unterschrieben per Post oder Fax an uns zurück.<br />
+            Bei Fragen oder Unklarheiten, setzen Sie sich bitte telefonisch mit uns in Verbindung.
+            ]]></de>
+            <en><![CDATA[]]></en>
         </locale>
 
-        <locale name="body.contract.id">
-            <de><![CDATA[Vertrags-Nr.]]></de>
-            <en><![CDATA[Contract no.]]></en>
-        </locale>
         <locale name="body.contactPerson">
             <de><![CDATA[Ansprechpartner]]></de>
             <en><![CDATA[Contact person]]></en>
         </locale>
-        <locale name="body.supplier_customer_no">
-            <de><![CDATA[Kunden-Nr. b. Lieferant]]></de>
-            <en><![CDATA[Custerom no. at supplier]]></en>
+
+        <locale name="body.paymentType">
+            <de><![CDATA[Zahlungsart]]></de>
+            <en><![CDATA[Payment method]]></en>
+        </locale>
+        <locale name="body.paymentTarget">
+            <de><![CDATA[Zahlungsziel]]></de>
+            <en><![CDATA[Payment target]]></en>
+        </locale>
+        <locale name="header.PurchasingProcess.title">
+            <de><![CDATA[Einkauf]]></de>
+            <en><![CDATA[Purchase]]></en>
+        </locale>
+        <locale name="body.supplier_invoice_no">
+            <de><![CDATA[Beleg-Nr. (Lieferant)]]></de>
+            <en><![CDATA[Document no. (Supplier)]]></en>
+        </locale>
+        <locale name="header.PurchasingProcess.supplier">
+            <de><![CDATA[Lieferant]]></de>
+            <en><![CDATA[Supplier]]></en>
+        </locale>
+        <locale name="header.PurchasingProcess.supplierId">
+            <de><![CDATA[Lieferanten-Nr.]]></de>
+            <en><![CDATA[Supplier no.]]></en>
         </locale>
 
     </groups>
