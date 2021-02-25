@@ -143,7 +143,7 @@ class Template implements OutputTemplateProviderInterface
                 break;
 
             case self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT:
-                $Package = QUI::getPackage('quiqqer/erp');;
+                $Package = QUI::getPackage('quiqqer/erp');
                 $Engine->assign('company', $Package->getConfig()->getSection('company'));
                 break;
 
