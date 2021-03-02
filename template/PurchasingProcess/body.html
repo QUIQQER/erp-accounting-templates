@@ -28,7 +28,9 @@
     <div class="purchasing-process-additional">
         <div class="purchasing-process-additional-left">
             <span class="additional-purchasing-process-title">{locale group="quiqqer/erp-accounting-templates" var="body.paymentType"}:</span>
-            <span class="additional-purchasing-process-value">{$Payment->getTitle()}</span>
+            {if $Payment}
+                <span class="additional-purchasing-process-value">{$Payment->getTitle()}</span>
+            {/if}
         </div>
 
         {if !empty($this->getAttribute('payment_due_date'))}

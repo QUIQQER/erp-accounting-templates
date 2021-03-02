@@ -13,7 +13,9 @@
             {locale group="quiqqer/erp-accounting-templates" var="header.PurchasingProcess.supplier"}
         </h3>
         {if $Address}
-        {$Address->getDisplay()}
+            {$Address->getDisplay()}
+        {else}
+            {$Supplier->getName()}
         {/if}
     </div>
 
