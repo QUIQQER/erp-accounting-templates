@@ -30,8 +30,8 @@
                 {if $Customer}
                 <tr>
                     <td>{locale group="quiqqer/erp-accounting-templates" var="body.customerId"}</td>
-                    {if $Customer->getAttribute('customerId')}
-                    <td class="value-customer"><span>{$Customer->getAttribute('customerId')}</span></td>
+                    {if $Customer->getCustomerNo()}
+                    <td class="value-customer"><span>{$Customer->getCustomerNo()}</span></td>
                     {else}
                     <td class="value-customer"><span>{$Customer->getId()}</span></td>
                     {/if}
