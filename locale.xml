@@ -355,10 +355,13 @@
 
         <locale name="offer.footer.extra" html="true">
             <de><![CDATA[
-            Um das Angebot anzunehmen, senden Sie es bitte unterschrieben per Post oder Fax an uns zurück.<br />
+            Um das Angebot anzunehmen, senden Sie es bitte unterschrieben per Post, Fax oder E-Mail an uns zurück.<br />
             Bei Fragen oder Unklarheiten, setzen Sie sich bitte telefonisch mit uns in Verbindung.
             ]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[
+            To accept the offer, please sign and return it to us by mail, fax or e-mail.<br />.
+            If you have any questions or uncertainties, please contact us by phone.
+            ]]></en>
         </locale>
 
         <locale name="body.contactPerson">
