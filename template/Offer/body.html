@@ -2,18 +2,31 @@
     <div class="offer-body-extra">
         <div class="offer-inquiry">
             {if !empty($projectName)}
-            <span class="offer-header-project">
-                {locale group="quiqqer/erp-accounting-templates" var="offer.body.project" project=$projectName}
-            </span>
+            <p>
+                <span>{locale group="pcsg/erp-accounting-templates" var="offer.body.project"}:</span>
+                <span>{$projectName}</span>
+            </p>
             {/if}
+
             {if !empty($contactName)}
-            {locale group="quiqqer/erp-accounting-templates" var="offer.body.customer.contact"}: {$contactName}
+            <p>
+                <span>{locale group="pcsg/erp-accounting-templates" var="offer.body.customer.contact"}:</span>
+                <span>{$contactName}</span>
+            </p>
             {/if}
+
             {if !empty($inquiryDate)}
-            <br/>{locale group="quiqqer/erp-accounting-templates" var="offer.body.customer.inquiry_date"}: {$inquiryDate}
+            <p>
+                <span>{locale group="pcsg/erp-accounting-templates" var="offer.body.customer.inquiry_date"}:</span>
+                <span>{$inquiryDate}</span>
+            </p>
             {/if}
+
             {if !empty($customerOfferNo)}
-            <br/>{locale group="quiqqer/erp-accounting-templates" var="offer.body.customer.offer_no"}: {$customerOfferNo}
+            <p>
+                <span>{locale group="pcsg/erp-accounting-templates" var="offer.body.customer.offer_no"}:</span>
+                <span>{$customerOfferNo}</span>
+            </p>
             {/if}
         </div>
     </div>

@@ -7,10 +7,12 @@
             <en><![CDATA[QUIQQER ERP Accounting - Default templates]]></en>
         </locale>
         <locale name="package.description">
-            <de><![CDATA[Standard-Templates für Dokumente des Rechnungswesen wie Rechnungen, Gutschriften, Verträge, Mahnungen etc.]]></de>
-            <en><![CDATA[Standard templates for accounting documents such as invoices, credit notes, contracts, dunnings etc.]]></en>
+            <de>
+                <![CDATA[Standard-Templates für Dokumente des Rechnungswesen wie Rechnungen, Gutschriften, Verträge, Mahnungen etc.]]></de>
+            <en>
+                <![CDATA[Standard templates for accounting documents such as invoices, credit notes, contracts, dunnings etc.]]></en>
         </locale>
-        
+
         <locale name="template.title">
             <de><![CDATA[QUIQQER ERP Rechnungswesen - Standard-Template]]></de>
             <en><![CDATA[QUIQQER ERP Accounting - Default template]]></en>
@@ -257,8 +259,8 @@
             <en><![CDATA[This offer is valid until <b>[date]</b>.]]></en>
         </locale>
         <locale name="offer.body.project">
-            <de><![CDATA[Projekt: [project]]]></de>
-            <en><![CDATA[Project: [project]]]></en>
+            <de><![CDATA[Projekt]]></de>
+            <en><![CDATA[Project]]></en>
         </locale>
         <locale name="body.deliveryAddress">
             <de><![CDATA[Lieferadresse]]></de>

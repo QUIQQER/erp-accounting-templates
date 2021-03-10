@@ -11,6 +11,28 @@
     width: 230mm;
 }
 
+.offer-inquiry {
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.offer-inquiry p {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+
+.offer-inquiry p span:first-child {
+    font-weight: bold;
+}
+
+
 /** Extra Data
  ===================================== */
 
