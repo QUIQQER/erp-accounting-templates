@@ -1,0 +1,67 @@
+.CashbookJournal {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.CashbookJournal-body {
+    padding: 10px 30px 0 70px;
+    width: 230mm;
+}
+
+.CashbookJournal tbody tr:nth-child(odd) {
+    background-color: #f4f2f0;
+}
+
+.CashbookJournal td,
+.CashbookJournal th {
+    padding: 5px;
+}
+
+.CashbookJournal th {
+    text-align: left;
+}
+
+.CashbookJournal-align-center {
+    text-align: center !important;
+}
+
+.CashbookJournal-align-right {
+    text-align: right !important;
+}
+
+.CashbookJournal-col-date {
+    width: 75px;
+}
+
+.CashbookJournal-col-documentNo {
+    width: 160px;
+}
+
+.CashbookJournal-col-amount {
+    width: 100px;
+}
+
+.CashbookJournal-col-account,
+.CashbookJournal-col-offsetAccount {
+    width: 100px;
+}
+
+.CashbookJournal-balance-label {
+    margin-right: 10px;
+}
+
+.CashbookJournal-balance-from {
+    float: right;
+    margin-right: 30px;
+    padding: 5px;
+}
+
+.CashbookJournal-balance-to {
+    float: right;
+    padding: 5px;
+}
+
+.CashbookJournal-balance-value {
+    font-size: 18px;
+    font-weight: bold;
+}

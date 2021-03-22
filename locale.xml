@@ -396,6 +396,52 @@
             <en><![CDATA[Supplier no.]]></en>
         </locale>
 
+        <!-- CashbookJournal -->
+        <locale name="CashbookJournal.title">
+            <de><![CDATA[Kassenbuch-Journal]]></de>
+            <en><![CDATA[Cashbook journal]]></en>
+        </locale>
+        <locale name="CashbookJournal.date.from">
+            <de><![CDATA[Zeitraum VON]]></de>
+            <en><![CDATA[Period FROM]]></en>
+        </locale>
+        <locale name="CashbookJournal.date.to">
+            <de><![CDATA[Zeitraum BIS]]></de>
+            <en><![CDATA[Period TO]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.date">
+            <de><![CDATA[Datum]]></de>
+            <en><![CDATA[Date]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.documentNo">
+            <de><![CDATA[Beleg-Nr.]]></de>
+            <en><![CDATA[Document no.]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.amount">
+            <de><![CDATA[Betrag]]></de>
+            <en><![CDATA[Amount]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.comment">
+            <de><![CDATA[Buchungstext]]></de>
+            <en><![CDATA[Posting text]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.account">
+            <de><![CDATA[Konto]]></de>
+            <en><![CDATA[Account]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.header.offsetAccount">
+            <de><![CDATA[Gegenkonto]]></de>
+            <en><![CDATA[Offset account]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.balanceStart">
+            <de><![CDATA[Startsaldo ([date])]]></de>
+            <en><![CDATA[Start balance ([date])]]></en>
+        </locale>
+        <locale name="CashbookJournal.tbl.balanceEnd">
+            <de><![CDATA[Endsaldo ([date])]]></de>
+            <en><![CDATA[End balance ([date])]]></en>
+        </locale>
+        
     </groups>
 
 </locales>
