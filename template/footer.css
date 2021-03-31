@@ -46,9 +46,11 @@
 }
 
 .invoice-footer-companyName img {
-    height: 58px;
+    max-height: 58px;
     position: relative;
     left: -7px;
+    max-width: 100%;
+    height: auto;
 }
 
 #pages {
