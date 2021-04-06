@@ -9,6 +9,11 @@
     width: 230mm;
 }
 
+.invoice-header-image img {
+    height: auto;
+    max-width: 350px;
+}
+
 .invoice-body-header-text {
     border-bottom: 1px solid #999;
     clear: both;
