@@ -15,7 +15,9 @@ class EventHandler
         QUI\HtmlToPdf\Document $Document
     ) {
         $Document->setAttribute('foldingMarks', true);
+        $Document->setAttribute('disableSmartShrinking', true);
 
+        $Document->setAttribute('headerSpacing', 0);
         $Document->setAttribute('marginTop', 110);
         $Document->setAttribute('marginBottom', 45);
         $Document->setAttribute('marginLeft', 0);

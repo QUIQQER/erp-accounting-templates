@@ -1,11 +1,11 @@
 <div class="invoice-header invoice-header-top">
-    <div class="invoice-header-image" style="margin-top: 20px; margin-bottom: 20px; position: relative">
+    <div class="invoice-header-image">
         {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
-        {image image=$Logo height="120" svgtopng=1}
+        {image image=$Logo height="120" svgtopng=1 host=1}
     </div>
 
     <div class="invoice-body-header-text">
-        {locale group="quiqqer/erp-accounting-templates" var="header"}
+        {locale group="quiqqer/erp-accounting-templates" var="header" shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
     </div>
 
     <div class="invoice-customer">
@@ -73,4 +73,5 @@
         {/if}
     </div>
 
+    <div class="invoice-header-line"></div>
 </div>

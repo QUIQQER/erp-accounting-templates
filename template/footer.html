@@ -1,5 +1,7 @@
 {if isset($Config)}
 <footer class="invoice-footer">
+    <div class="invoice-footer-line"></div>
+
     <div style="width: 100%;">
         {locale group="quiqqer/erp-accounting-templates" var="footer.top.box"}
     </div>
@@ -7,7 +9,7 @@
     <div class="invoice-footer-container">
         <header class="invoice-footer-companyName">
             {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
-            {image image=$Logo height="120" svgtopng=1}
+            {image image=$Logo height="120" svgtopng=1 host=1}
         </header>
         <ul>
             {if $Config->get('company', 'street')}
@@ -41,28 +43,36 @@
 
             {if $Config->get('company', 'phone')}
             <tr>
-                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.phone"}</td>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates"
+                    var="footer.box.company.contact.phone"}
+                </td>
                 <td>{$Config->get('company', 'phone')}</td>
             </tr>
             {/if}
 
             {if $Config->get('company', 'fax')}
             <tr>
-                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.fax"}</td>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates"
+                    var="footer.box.company.contact.fax"}
+                </td>
                 <td>{$Config->get('company', 'fax')}</td>
             </tr>
             {/if}
 
             {if $Config->get('company', 'email')}
             <tr>
-                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.email"}</td>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates"
+                    var="footer.box.company.contact.email"}
+                </td>
                 <td>{$Config->get('company', 'email')}</td>
             </tr>
             {/if}
 
             {if $Config->get('company', 'web')}
             <tr>
-                <td class="table-label">{locale group="quiqqer/erp-accounting-templates" var="footer.box.company.contact.web"}</td>
+                <td class="table-label">{locale group="quiqqer/erp-accounting-templates"
+                    var="footer.box.company.contact.web"}
+                </td>
                 <td>{$Config->get('company', 'web')}</td>
             </tr>
             {/if}

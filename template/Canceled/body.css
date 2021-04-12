@@ -54,6 +54,7 @@
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
+    width: 100%;
 }
 
 .invoice-header {

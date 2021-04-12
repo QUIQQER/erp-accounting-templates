@@ -21,8 +21,8 @@
 
     <groups name="quiqqer/erp-accounting-templates" datatype="php">
         <locale name="header" html="true">
-            <de><![CDATA[&nbsp;]]></de>
-            <en><![CDATA[&nbsp;]]></en>
+            <de><![CDATA[[shopownerAdressShort]]]></de>
+            <en><![CDATA[[shopownerAdressShort]]]></en>
         </locale>
 
         <locale name="body.id">
@@ -449,7 +449,7 @@
             <de><![CDATA[Endsaldo ([date])]]></de>
             <en><![CDATA[End balance ([date])]]></en>
         </locale>
-        
+
     </groups>
 
 </locales>

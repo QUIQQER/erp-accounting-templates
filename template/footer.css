@@ -1,24 +1,33 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .invoice-footer {
-    border-top: 1px solid #d6d6d6;
     clear: both;
     display: inline-block;
     margin-top: 20px;
-    margin-left: 70px;
-    position: absolute;
+    margin-left: 0;
+    padding: 0 15mm 0 20mm;
+    position: relative;
     top: 0;
-    width: 230mm;
+    width: 210mm;
+}
+
+.invoice-footer-line {
+    border-top: 1px solid #d6d6d6;
+    width: 100%;
 }
 
 .invoice-footer-container {
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     width: 25%;
     line-height: 18px;
 }
 
 .invoice-footer-container table {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
     border-spacing: 0;
 }
@@ -42,6 +51,10 @@
 }
 
 .table-label {
+    padding-right: 5px;
+}
+
+.invoice-footer-container table td + td {
     padding-right: 5px;
 }
 
