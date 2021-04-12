@@ -170,6 +170,10 @@
             <de><![CDATA[Vertragsbestätigung]]></de>
             <en><![CDATA[Contract confirmation]]></en>
         </locale>
+        <locale name="title.contract.cancel_confirm">
+            <de><![CDATA[Kündigungsbestätigung]]></de>
+            <en><![CDATA[Confirmation of termination]]></en>
+        </locale>
         <locale name="contract.body.id">
             <de><![CDATA[Vertrags-Nr.]]></de>
             <en><![CDATA[Contract no.]]></en>
@@ -181,6 +185,10 @@
         <locale name="contract.body.terminationDate">
             <de><![CDATA[Vertragsende]]></de>
             <en><![CDATA[End of contract]]></en>
+        </locale>
+        <locale name="contract.body.cancelDate">
+            <de><![CDATA[Kündigungsdatum]]></de>
+            <en><![CDATA[Cancellation date]]></en>
         </locale>
         <locale name="contract.body.invoiceInterval">
             <de><![CDATA[Rechnungs-Intervall]]></de>

@@ -14,6 +14,7 @@ class Template implements OutputTemplateProviderInterface
      */
     const ENTITY_TYPE_CANCELLED = 'Canceled';
     const ENTITY_TYPE_CONTRACT = 'Contract';
+    const ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM = 'ContractCancelConfirm';
     const ENTITY_TYPE_CREDIT_NOTE = 'CreditNote';
     const ENTITY_TYPE_INVOICE = 'Invoice';
     const ENTITY_TYPE_OFFER = 'Offer';
@@ -40,7 +41,8 @@ class Template implements OutputTemplateProviderInterface
             self::ENTITY_TYPE_OPEN_ITEMS_LIST,
             self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT,
             self::ENTITY_TYPE_PURCHASING_PROCESS,
-            self::ENTITY_TYPE_CASHBOOK_JOURNAL
+            self::ENTITY_TYPE_CASHBOOK_JOURNAL,
+            self::ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM
         ];
     }
 
@@ -63,6 +65,7 @@ class Template implements OutputTemplateProviderInterface
             case self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT:
             case self::ENTITY_TYPE_PURCHASING_PROCESS:
             case self::ENTITY_TYPE_CASHBOOK_JOURNAL:
+            case self::ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM:
                 return ['system_default'];
         }
 

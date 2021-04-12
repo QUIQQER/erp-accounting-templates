@@ -1,0 +1,21 @@
+<div class="contract-body">
+    <div class="contract-details">
+        {if $cancelDate}
+        <p>
+            <span>{locale group="quiqqer/erp-accounting-templates" var="contract.body.cancelDate"}:</span>
+            <span>{$cancelDate}</span>
+        </p>
+        {/if}
+
+        {if $end}
+        <p>
+            <span>{locale group="quiqqer/erp-accounting-templates" var="contract.body.terminationDate"}:</span>
+            <span>{$end}</span>
+        </p>
+        {/if}
+    </div>
+
+    <div class="contract-confirmation-text">
+        {$cancelText}
+    </div>
+</div>
