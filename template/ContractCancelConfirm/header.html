@@ -5,7 +5,7 @@
     </div>
 
     <div class="invoice-body-header-text">
-        {locale group="quiqqer/erp-accounting-templates" var="header"}
+        {locale group="quiqqer/erp-accounting-templates" var="header" shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
     </div>
 
     <div class="invoice-customer">
@@ -20,7 +20,7 @@
             <table>
                 <tbody>
                 <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.id"}</td>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}</td>
                     <td class="value-id"><span>{$this->getId()}</span></td>
                 </tr>
                 <tr>
@@ -43,11 +43,6 @@
                     <td class="value-editor-customer"><span>{$Editor->getName()}</span></td>
                 </tr>
                 {/if}
-
-                <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}</td>
-                    <td class="value-contract-id"><span>{$this->getId()}</span></td>
-                </tr>
                 </tbody>
             </table>
         </div>
