@@ -14,15 +14,32 @@
     margin-bottom: 5px !important;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .invoice-header {
-    border-bottom: 1px solid #d6d6d6;
     display: inline-block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    height: 420px;
-    margin-left: 70px;
-    padding-bottom: 20px;
+    height: 110mm;
+    margin-left: 0;
+    padding: 5mm 15mm 5mm 20mm;
     position: relative;
-    width: 230mm;
+    width: 210mm;
+}
+
+.invoice-header-image {
+    height: 40mm;
+    margin-top: 5mm;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.invoice-header-image img {
+    height: auto;
+    margin: 5mm 0 0 0;
+    max-height: 20mm;
+    max-width: 350px;
 }
 
 .invoice-body-header-text {
@@ -32,25 +49,25 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
     line-height: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 100%;
+}
+
+.invoice-body-header-text p {
+    margin: 0;
 }
 
 .invoice-customer {
     display: block;
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 50%;
-}
-
-.invoice-customer p {
-    margin: 0 0 5px 0;
+    width: 55%;
 }
 
 .invoice-data {
     float: right;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 350px;
+    width: 45%;
 }
 
 .value-id,
@@ -64,7 +81,7 @@
     border-radius: 3px;
     margin-left: auto;
     padding: 10px;
-    width: calc(100% - 20px);
+    width: 100%;
 }
 
 .delivery-address {
@@ -110,19 +127,13 @@
     width: 35%;
 }
 
-.value-id span,
 .invoice-data-highlight td span {
     background: #fff;
     border-radius: 3px;
     display: inline-block;
     margin: 0 0 2px;
     padding: 0 10px;
-    width: 200px;
-}
-
-.value-id span {
-    padding: 2px 10px;
-    width: 305px;
+    width: 160px;
 }
 
 .invoice-customer h3 {

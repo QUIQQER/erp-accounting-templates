@@ -1,6 +1,10 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 .invoice-body {
-    padding: 10px 30px 0 70px;
-    width: 230mm;
+    padding: 5mm 15mm 0 20mm;
+    width: 210mm;
 }
 
 .invoice-company,

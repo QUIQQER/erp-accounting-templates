@@ -1,9 +1,12 @@
-.sepa-mandate-container {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 0 30px 0 70px;
-    width: 230mm;
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
+.sepa-mandate-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 5mm 15mm 0 20mm;
+    width: 210mm;
+}
 
 .sepa-mandate-body {
     font-size: 14px;
