@@ -176,6 +176,7 @@
 
 .articles-sum {
     float: right;
+    font-size: 12px;
     margin-top: 20px;
     text-align: right;
 }
@@ -207,6 +208,10 @@
 .invoice-additional-left {
     float: left;
     width: 40%;
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .additional-invoice-value {
@@ -228,6 +233,10 @@
 .offer-additional-left {
     float: left;
     width: 40%;
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .offer-additional-global-invoice-text {

@@ -207,6 +207,7 @@
 
 .articles-sum {
     float: right;
+    font-size: 12px;
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
@@ -259,6 +260,10 @@
 .invoice-additional-left {
     float: left;
     width: 38%;
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .additional-invoice-value {

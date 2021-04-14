@@ -209,6 +209,7 @@
 
 .articles-sum {
     float: right;
+    font-size: 12px;
     page-break-inside: avoid !important;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
@@ -264,4 +265,8 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     margin-top: 40px;
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }

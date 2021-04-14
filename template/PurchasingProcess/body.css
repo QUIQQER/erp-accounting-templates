@@ -247,6 +247,10 @@
     display: block;
     float: left;
     /*width: 38%;*/
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .additional-purchasing-process-value {

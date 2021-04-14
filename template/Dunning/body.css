@@ -32,6 +32,10 @@
     clear: both;
     float: left;
     margin-top: 40px;
+
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .dunning-header {
