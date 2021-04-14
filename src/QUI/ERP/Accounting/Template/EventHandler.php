@@ -18,7 +18,7 @@ class EventHandler
         $Document->setAttribute('disableSmartShrinking', true);
 
         $Document->setAttribute('headerSpacing', 0);
-        $Document->setAttribute('marginTop', 110);
+        $Document->setAttribute('marginTop', 120);
         $Document->setAttribute('marginBottom', 45);
         $Document->setAttribute('marginLeft', 0);
         $Document->setAttribute('marginRight', 0);
