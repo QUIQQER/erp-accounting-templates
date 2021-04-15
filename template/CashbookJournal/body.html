@@ -8,8 +8,8 @@
             <th class="CashbookJournal-col-documentNo">
                 {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.documentNo"}
             </th>
-            <th class="CashbookJournal-align-right CashbookJournal-col-amount">
-                {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.amount"}
+            <th class="CashbookJournal-align-left CashbookJournal-col-type">
+                {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.type"}
             </th>
             <th>
                 {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.comment"}
@@ -19,6 +19,9 @@
             </th>
             <th class="CashbookJournal-align-right CashbookJournal-col-offsetAccount">
                 {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.offsetAccount"}
+            </th>
+            <th class="CashbookJournal-align-right CashbookJournal-col-amount">
+                {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.header.amount"}
             </th>
         </tr>
         </thead>
@@ -31,8 +34,8 @@
             <td>
                 {$entry['documentNo']}
             </td>
-            <td class="CashbookJournal-align-right">
-                {$entry['display_amount']}
+            <td class="CashbookJournal-align-left">
+                {$entry['display_type']}
             </td>
             <td>
                 {$entry['comment']}
@@ -43,31 +46,34 @@
             <td class="CashbookJournal-align-right">
                 {$entry['offsetAccount']}
             </td>
+            <td class="CashbookJournal-align-right">
+                {$entry['display_amount']}
+            </td>
         </tr>
         {/foreach}
 
         <tr>
-            <td colspan="6">
+            <td colspan="7">
 
             </td>
         </tr>
 
         <tr class="CashbookJournal-balance">
-            <td colspan="6">
-                <span class="CashbookJournal-balance-to">
-                    <span class="CashbookJournal-balance-label">
-                    {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.balanceEnd" date=$to}
-                    </span>
-                    <span class="CashbookJournal-balance-value">
-                    {$balance['end']}
-                    </span>
-                </span>
+            <td colspan="7">
                 <span class="CashbookJournal-balance-from">
                     <span class="CashbookJournal-balance-label">
                     {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.balanceStart" date=$from}
                     </span>
                     <span class="CashbookJournal-balance-value">
                     {$balance['start']}
+                    </span>
+                </span>
+                <span class="CashbookJournal-balance-to">
+                    <span class="CashbookJournal-balance-label">
+                    {locale group="quiqqer/erp-accounting-templates" var="CashbookJournal.tbl.balanceEnd" date=$to}
+                    </span>
+                    <span class="CashbookJournal-balance-value">
+                    {$balance['end']}
                     </span>
                 </span>
             </td>

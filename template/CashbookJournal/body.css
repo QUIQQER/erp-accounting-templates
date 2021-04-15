@@ -9,6 +9,7 @@
 
 .CashbookJournal {
     border-collapse: collapse;
+    font-size: 12px;
     width: 100%;
 }
 
@@ -42,12 +43,16 @@
 }
 
 .CashbookJournal-col-amount {
-    width: 100px;
+    width: 80px;
 }
 
 .CashbookJournal-col-account,
 .CashbookJournal-col-offsetAccount {
-    width: 100px;
+    width: 75px;
+}
+
+.CashbookJournal-balance {
+    border-top: 1px dotted #0e0e0e;
 }
 
 .CashbookJournal-balance-label {
@@ -55,17 +60,22 @@
 }
 
 .CashbookJournal-balance-from {
+    clear: both;
+    display: block;
     float: right;
-    margin-right: 30px;
-    padding: 5px;
 }
 
 .CashbookJournal-balance-to {
+    clear: both;
+    display: block;
     float: right;
-    padding: 5px;
+    margin-top: 5px;
 }
 
 .CashbookJournal-balance-value {
-    font-size: 18px;
+    display: inline-block;
+    font-size: 15px;
     font-weight: bold;
+    text-align: right;
+    width: 100px;
 }

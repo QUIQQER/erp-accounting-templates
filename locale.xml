@@ -410,12 +410,12 @@
             <en><![CDATA[Cashbook journal]]></en>
         </locale>
         <locale name="CashbookJournal.date.from">
-            <de><![CDATA[Zeitraum VON]]></de>
-            <en><![CDATA[Period FROM]]></en>
+            <de><![CDATA[Zeitraum von]]></de>
+            <en><![CDATA[Period from]]></en>
         </locale>
         <locale name="CashbookJournal.date.to">
-            <de><![CDATA[Zeitraum BIS]]></de>
-            <en><![CDATA[Period TO]]></en>
+            <de><![CDATA[Zeitraum bis]]></de>
+            <en><![CDATA[Period to]]></en>
         </locale>
         <locale name="CashbookJournal.tbl.header.date">
             <de><![CDATA[Datum]]></de>
@@ -449,6 +449,11 @@
             <de><![CDATA[Endsaldo ([date])]]></de>
             <en><![CDATA[End balance ([date])]]></en>
         </locale>
+        <locale name="CashbookJournal.tbl.header.type">
+            <de><![CDATA[Typ]]></de>
+            <en><![CDATA[Type]]></en>
+        </locale>
+
 
     </groups>
 
