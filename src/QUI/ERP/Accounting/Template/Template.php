@@ -23,6 +23,7 @@ class Template implements OutputTemplateProviderInterface
     const ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT = 'SEPADirectDebitAgreement';
     const ENTITY_TYPE_PURCHASING_PROCESS = 'PurchasingProcess';
     const ENTITY_TYPE_CASHBOOK_JOURNAL = 'CashbookJournal';
+    const ENTITY_TYPE_SALES_ORDER = 'SalesOrder';
 
     /**
      * Get all output types the template package provides templates for
@@ -42,7 +43,8 @@ class Template implements OutputTemplateProviderInterface
             self::ENTITY_TYPE_SEPA_DIRECT_DEBIT_AGREEMENT,
             self::ENTITY_TYPE_PURCHASING_PROCESS,
             self::ENTITY_TYPE_CASHBOOK_JOURNAL,
-            self::ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM
+            self::ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM,
+            self::ENTITY_TYPE_SALES_ORDER
         ];
     }
 
@@ -66,6 +68,7 @@ class Template implements OutputTemplateProviderInterface
             case self::ENTITY_TYPE_PURCHASING_PROCESS:
             case self::ENTITY_TYPE_CASHBOOK_JOURNAL:
             case self::ENTITY_TYPE_CONTRACT_CANCEL_CONFIRM:
+            case self::ENTITY_TYPE_SALES_ORDER:
                 return ['system_default'];
         }
 

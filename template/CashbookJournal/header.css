@@ -1,0 +1,125 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.CashbookJournal-header {
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 120mm;
+    margin-left: 0;
+    padding: 5mm 15mm 5mm 20mm;
+    position: relative;
+    width: 210mm;
+}
+
+.invoice-header-image {
+    height: 40mm;
+    margin-top: 5mm;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.invoice-header-image img {
+    height: auto;
+    margin: 5mm 0 0 0;
+    max-height: 20mm;
+    max-width: 350px;
+}
+
+.invoice-body-header-text {
+    border-bottom: 1px solid #999;
+    clear: both;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.invoice-body-header-text p {
+    margin: 0;
+}
+
+.invoice-customer {
+    display: block;
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 55%;
+}
+
+.invoice-data {
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 45%;
+}
+
+.value-id,
+.value-date,
+.value-customer {
+    font-weight: bold;
+}
+
+.invoice-data-highlight {
+    background: #e5e5e5;
+    border-radius: 3px;
+    margin-left: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.delivery-address {
+    font-size: 12px;
+    margin-top: 0;
+    margin-left: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.delivery-address-label {
+    font-weight: bold;
+}
+
+.invoice-data table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.invoice-data table td + td {
+    line-height: 20px;
+    padding: 0 0 0 10px;
+}
+
+.invoice-data-highlight h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.invoice-data-highlight table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+.invoice-data-highlight td {
+    font-size: 14px;
+}
+
+.invoice-data-highlight td:first-child {
+    width: 35%;
+}
+
+.invoice-data-highlight td span {
+    background: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 0 0 2px;
+    padding: 0 10px;
+    width: 160px;
+}
+
+.invoice-customer h3 {
+    margin: 0 0 10px 0;
+}
