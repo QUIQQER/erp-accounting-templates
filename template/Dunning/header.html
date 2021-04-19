@@ -57,19 +57,6 @@
                 </tbody>
             </table>
         </div>
-
-        {if isset($useShipping) && $useShipping && $DeliveryAddress && $DeliveryAddress->getText() !== ''}
-        <div class="delivery-address">
-            <span class="delivery-address-label">
-                {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:
-            </span><br/>
-            {if $DeliveryAddress}
-            {$DeliveryAddress->getText()}
-            {else}
-            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
-            {/if}
-        </div>
-        {/if}
     </div>
 
 </div>

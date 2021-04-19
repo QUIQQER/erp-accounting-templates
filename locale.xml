@@ -455,6 +455,15 @@
         </locale>
 
 
+        <locale name="SalesOrder.body.delivery_date">
+            <de><![CDATA[Liefertermin]]></de>
+            <en><![CDATA[Delivery date]]></en>
+        </locale>
+        <locale name="SalesOrder.title">
+            <de><![CDATA[Auftragsbestätigung]]></de>
+            <en><![CDATA[Sales order confirmation]]></en>
+        </locale>
+
     </groups>
 
 </locales>

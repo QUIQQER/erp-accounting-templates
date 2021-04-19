@@ -1,0 +1,42 @@
+<div class="salesorder-body">
+    <div class="salesorder-body-extra">
+        {if !empty($viewData['project_name'])}
+        <p class="salesorder-body-project">
+            {locale group="quiqqer/erp-accounting-templates" var="body.project"}: {$viewData['project_name']}
+        </p>
+        {/if}
+
+        {if !empty($viewData['delivery_date'])}
+        <p class="salesorder-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="SalesOrder.body.delivery_date"}:
+            {$viewData['delivery_date']}
+        </p>
+        {/if}
+
+        {if !empty($viewData['contact_person'])}
+        <p class="salesorder-body-orderedBy">
+            {locale group="quiqqer/erp-accounting-templates" var="body.contactPerson"}:
+            {$viewData['contact_person']}
+        </p>
+        {/if}
+    </div>
+
+    <div class="salesorder-articles">
+        {$ArticleList->toHTML()}
+    </div>
+
+    <div class="salesorder-additional">
+        <div class="salesorder-additional-left">
+            <span class="additional-salesorder-title">{locale group="quiqqer/erp-accounting-templates" var="body.paymentType"}:</span>
+            {if !empty($paymentMethod)}
+            <span class="additional-salesorder-value">{$paymentMethod}</span>
+            {/if}
+        </div>
+
+        {if !empty($this->getAttribute('additional_text'))}
+        <div class="salesorder-additional-bottom">
+            {$this->getAttribute('additional_text')}
+        </div>
+        {/if}
+    </div>
+</div>
