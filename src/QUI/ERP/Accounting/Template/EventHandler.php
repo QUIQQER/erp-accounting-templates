@@ -14,6 +14,13 @@ class EventHandler
         $Output,
         QUI\HtmlToPdf\Document $Document
     ) {
+        $class = $Output->getTemplateProvider();
+        $class = \trim($class, '\\');
+
+        if ($class !== Template::class) {
+            return;
+        }
+
         $Document->setAttribute('foldingMarks', true);
         $Document->setAttribute('disableSmartShrinking', true);
 
