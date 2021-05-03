@@ -5,7 +5,8 @@
     </div>
 
     <div class="invoice-body-header-text">
-        {locale group="quiqqer/erp-accounting-templates" var="header" shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
+        {locale group="quiqqer/erp-accounting-templates" var="header"
+        shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
     </div>
 
     <div class="invoice-customer">
@@ -16,7 +17,9 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.contract.cancel_confirm"}</h2>
+            <h2 style="font-size: 1.1rem">
+                {locale group="quiqqer/erp-accounting-templates" var="title.contract.cancel_confirm"}
+            </h2>
             <table>
                 <tbody>
                 <tr>
