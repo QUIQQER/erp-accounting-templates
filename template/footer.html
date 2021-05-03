@@ -99,10 +99,9 @@
                 {$Config->get('company', 'taxNumber')}
             </li>
             {/if}
-            {if $Config->get('company', 'hrb')}
+            {if $Config->get('company', 'register')}
             <li>
-                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.taxInfo.hrb"}
-                {$Config->get('company', 'hrb')}
+                {$Config->get('company', 'register')}
             </li>
             {/if}
         </ul>
@@ -133,6 +132,7 @@
             {if $Config->get('company', 'bankIban')}
             <li>
                 {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankIban"}
+                <br />
                 {$Config->get('company', 'bankIban')}
             </li>
             {/if}
@@ -146,19 +146,6 @@
             <li>
                 {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankSwift"}
                 {$Config->get('company', 'bankSwift')}
-            </li>
-            {/if}
-            {if $Config->get('company', 'bankAccountNumber') || $Config->get('company', 'bankCode')}
-            <li>
-                {if $Config->get('company', 'bankAccountNumber')}
-                {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankAccountNumber"}
-                {$Config->get('company', 'bankAccountNumber')}
-                {/if}
-
-                {if $Config->get('company', 'bankCode')}
-                | {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankCode"}
-                {$Config->get('company', 'bankCode')}
-                {/if}
             </li>
             {/if}
         </ul>
