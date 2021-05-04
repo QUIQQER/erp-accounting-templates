@@ -57,6 +57,10 @@
             <de><![CDATA[Vertrags-Nr.]]></de>
             <en><![CDATA[Contract No.]]></en>
         </locale>
+        <locale name="body.salesOrder.id">
+            <de><![CDATA[Auftrags-Nr.]]></de>
+            <en><![CDATA[Sales order no.]]></en>
+        </locale>
 
         <locale name="footer.top.box" html="true">
             <de><![CDATA[&nbsp;]]></de>

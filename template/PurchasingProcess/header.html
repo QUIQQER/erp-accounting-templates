@@ -66,6 +66,14 @@
                     <td class="value-contract-id"><span>{$contract.id}</span></td>
                 </tr>
                 {/if}
+
+                {if $this->getPurchasingProcess()->getData('salesOrder')}
+                {assign var=salesOrder value=$this->getPurchasingProcess()->getData('salesOrder')}
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.salesOrder.id"}</td>
+                    <td class="value-contract-id"><span>{$salesOrder.id_str}</span></td>
+                </tr>
+                {/if}
                 </tbody>
             </table>
         </div>

@@ -5,20 +5,21 @@
     </div>
 
     <div class="invoice-body-header-text">
-        {locale group="quiqqer/erp-accounting-templates" var="header" shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
+        {locale group="quiqqer/erp-accounting-templates" var="header"
+        shopownerAdressShort=QUI\ERP\Defaults::getShortAddress()}
     </div>
 
     <div class="invoice-customer">
         {if $Address}
-            {$Address->getDisplay()}
+        {$Address->getDisplay()}
         {else}
-            {$viewData['customer_name']}
+        {$viewData['customer_name']}
         {/if}
     </div>
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="SalesOrder.title"}</h2>
+            <h2 style="font-size: 1.1rem">{locale group="quiqqer/erp-accounting-templates" var="SalesOrder.title"}</h2>
             <table>
                 <tbody>
                 <tr>
@@ -51,9 +52,9 @@
                 {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress"}:
             </span><br/>
             {if $DeliveryAddress && $DeliveryAddress->getText() !== ''}
-                {$DeliveryAddress->getText()}
+            {$DeliveryAddress->getText()}
             {else}
-                {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
+            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
             {/if}
         </div>
         {/if}

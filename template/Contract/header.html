@@ -44,10 +44,13 @@
                 </tr>
                 {/if}
 
+                {if $this->getContract()->getPaymentData('salesOrder')}
+                {assign var=salesOrder value=$this->getContract()->getPaymentData('salesOrder')}
                 <tr>
-                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.contract.id"}</td>
-                    <td class="value-contract-id"><span>{$this->getId()}</span></td>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.salesOrder.id"}</td>
+                    <td class="value-contract-id"><span>{$salesOrder.id_str}</span></td>
                 </tr>
+                {/if}
                 </tbody>
             </table>
         </div>

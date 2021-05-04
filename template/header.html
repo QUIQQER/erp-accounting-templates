@@ -55,6 +55,18 @@
                     <td class="value-contract-id"><span>{$contract.id}</span></td>
                 </tr>
                 {/if}
+
+                {if method_exists($this, 'getInvoice') &&
+                $this->getInvoice() &&
+                method_exists($this->getInvoice(), 'getPaymentDataEntry') &&
+                $this->getInvoice()->getPaymentDataEntry('salesOrder')
+                }
+                {assign var=salesOrder value=$this->getInvoice()->getPaymentDataEntry('salesOrder')}
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="body.salesOrder.id"}</td>
+                    <td class="value-contract-id"><span>{$salesOrder.id_str}</span></td>
+                </tr>
+                {/if}
                 </tbody>
             </table>
         </div>
