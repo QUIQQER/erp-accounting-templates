@@ -467,6 +467,28 @@
             <de><![CDATA[Auftragsbestätigung]]></de>
             <en><![CDATA[Sales order confirmation]]></en>
         </locale>
+        <locale name="SalesOrder.body.order_date">
+            <de><![CDATA[Bestellt am]]></de>
+            <en><![CDATA[Ordered at]]></en>
+        </locale>
+        <locale name="SalesOrder.body.text">
+            <de><![CDATA[
+<p>Herzlichen Dank für Ihren Auftrag vom <b>[orderDate]</b>.</p>
+<p>Gemäß den mit Ihnen vereinbarten Konditionen erbringen wir die folgenden Leistungen:</p>
+]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="SalesOrder.body.text_with_offer_reference">
+            <de><![CDATA[
+<p>Herzlichen Dank für Ihren Auftrag vom <b>[orderDate]</b>.</p>
+<p>Gemäß unserem Angebot <b>[offerId]</b> erbringen wir die folgenden Leistungen:</p>
+]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="SalesOrder.body.delivery_address_like_customer_address">
+            <de><![CDATA[Lieferadresse wie Kundenadresse]]></de>
+            <en><![CDATA[Delivery address like customer address]]></en>
+        </locale>
 
     </groups>
 

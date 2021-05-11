@@ -42,6 +42,17 @@
                     <td class="value-editor-customer"><span>{$viewData['editor_name']}</span></td>
                 </tr>
                 {/if}
+
+                {if $this->getSalesOrder()->getData('offerId')}
+                <tr>
+                    <td>{locale group="quiqqer/erp-accounting-templates" var="offer.body.id"}</td>
+                    <td class="value-offerId">
+                        <span>
+                        {$this->getSalesOrder()->getData('offerId')}
+                        </span>
+                    </td>
+                </tr>
+                {/if}
                 </tbody>
             </table>
         </div>
@@ -54,7 +65,8 @@
             {if $DeliveryAddress && $DeliveryAddress->getText() !== ''}
             {$DeliveryAddress->getText()}
             {else}
-            {locale group="quiqqer/erp-accounting-templates" var="body.deliveryAddress_like_invoiceAddress"}
+            {locale group="quiqqer/erp-accounting-templates"
+            var="SalesOrder.body.delivery_address_like_customer_address"}
             {/if}
         </div>
         {/if}
