@@ -26,7 +26,7 @@ class EventHandler
 
         $Document->setAttribute('headerSpacing', 0);
         $Document->setAttribute('marginTop', 120);
-        $Document->setAttribute('marginBottom', 45);
+        $Document->setAttribute('marginBottom', 48);
         $Document->setAttribute('marginLeft', 0);
         $Document->setAttribute('marginRight', 0);
     }
