@@ -3,6 +3,7 @@
 }
 
 .invoice-footer {
+    height: 40mm;
     clear: both;
     display: inline-block;
     margin-top: 20px;
