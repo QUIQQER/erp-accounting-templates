@@ -6,12 +6,15 @@
         {locale group="quiqqer/erp-accounting-templates" var="footer.top.box"}
     </div>
 
-    <div class="invoice-footer-container">
-        <header class="invoice-footer-companyName">
-            {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
-            {image image=$Logo height="120" svgtopng=1 host=1}
-        </header>
+    <div class="invoice-footer-container invoice-footer-container__company">
         <ul>
+            {if $Config->get('company', 'name')}
+            <li>
+                <header>
+                {$Config->get('company', 'name')}
+                </header>
+            </li>
+            {/if}
             {if $Config->get('company', 'street')}
             <li>
                 {$Config->get('company', 'street')}
@@ -132,7 +135,7 @@
             {if $Config->get('company', 'bankIban')}
             <li>
                 {locale group="quiqqer/erp-accounting-templates" var="footer.box.company.bankIban"}
-                <br />
+
                 {$Config->get('company', 'bankIban')}
             </li>
             {/if}

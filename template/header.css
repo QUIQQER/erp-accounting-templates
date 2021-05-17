@@ -41,11 +41,14 @@
     margin: 0;
 }
 
-.invoice-customer {
+.invoice-customer,
+.invoice-customer address {
     display: block;
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 55%;
+    font-style: normal !important;
+    font-size: 14px !important;
 }
 
 .invoice-data {
