@@ -13,7 +13,7 @@
         </p>
         {/if}
 
-        {if !empty($this->getDeliveryDate())}
+        {if $this->getDeliveryDate() !== '-'}
         <p class="salesorder-body-orderedBy">
             {locale group="quiqqer/erp-accounting-templates" var="SalesOrder.body.delivery_date"}:
             {$this->getDeliveryDate()}
@@ -21,16 +21,23 @@
         {/if}
 
         <p class="salesorder-body-text">
+            {if $this->getSalesOrder()->getAttribute('order_date')}
+                {locale group="quiqqer/erp-accounting-templates"
+                var="SalesOrder.body.text_intro_date"
+                orderDate=$this->getOrderDate()
+                }
+            {else}
+                {locale group="quiqqer/erp-accounting-templates" var="SalesOrder.body.text_intro"}
+            {/if}
+
             {if $this->getSalesOrder()->getData('offerId')}
                 {locale group="quiqqer/erp-accounting-templates"
                         var="SalesOrder.body.text_with_offer_reference"
                         offerId=$this->getSalesOrder()->getData('offerId')
-                        orderDate=$this->getOrderDate()
                 }
             {else}
                 {locale group="quiqqer/erp-accounting-templates"
                         var="SalesOrder.body.text"
-                        orderDate=$this->getOrderDate()
                 }
             {/if}
         </p>

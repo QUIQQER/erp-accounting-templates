@@ -471,19 +471,29 @@
             <de><![CDATA[Bestellt am]]></de>
             <en><![CDATA[Ordered at]]></en>
         </locale>
+        <locale name="SalesOrder.body.text_intro">
+            <de><![CDATA[<p>Herzlichen Dank für Ihren Auftrag.</p>]]></de>
+            <en><![CDATA[<p>Thank you very much for your sales order.</p>]]></en>
+        </locale>
+        <locale name="SalesOrder.body.text_intro_date">
+            <de><![CDATA[<p>Herzlichen Dank für Ihren Auftrag vom <b>[orderDate]</b>.</p>]]></de>
+            <en><![CDATA[<p>Thank you very much for your sales order from <b>[orderDate]</b>.</p>]]></en>
+        </locale>
         <locale name="SalesOrder.body.text">
             <de><![CDATA[
-<p>Herzlichen Dank für Ihren Auftrag vom <b>[orderDate]</b>.</p>
 <p>Gemäß den mit Ihnen vereinbarten Konditionen erbringen wir die folgenden Leistungen:</p>
 ]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[
+<p>According to the conditions agreed with you, we provide the following services:</p>
+]]></en>
         </locale>
         <locale name="SalesOrder.body.text_with_offer_reference">
             <de><![CDATA[
-<p>Herzlichen Dank für Ihren Auftrag vom <b>[orderDate]</b>.</p>
 <p>Gemäß unserem Angebot <b>[offerId]</b> erbringen wir die folgenden Leistungen:</p>
 ]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[
+<p>According to our offer <b>[offerId]</b> we provide the following services:</p>
+]]></en>
         </locale>
         <locale name="SalesOrder.body.delivery_address_like_customer_address">
             <de><![CDATA[Lieferadresse wie Kundenadresse]]></de>
