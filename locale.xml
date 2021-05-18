@@ -400,6 +400,10 @@
             <de><![CDATA[Einkauf]]></de>
             <en><![CDATA[Purchase]]></en>
         </locale>
+        <locale name="header.PurchasingProcess.title_draft">
+            <de><![CDATA[Einkauf (Entwurf)]]></de>
+            <en><![CDATA[Purchase (draft)]]></en>
+        </locale>
         <locale name="body.supplier_invoice_no">
             <de><![CDATA[Beleg-Nr. (Lieferant)]]></de>
             <en><![CDATA[Document no. (Supplier)]]></en>
