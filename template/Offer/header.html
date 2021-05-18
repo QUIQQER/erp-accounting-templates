@@ -15,7 +15,11 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
+            {if $this->isDraft()}
+            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.offer_draft"}</h2>
+            {else}
             <h2>{locale group="quiqqer/erp-accounting-templates" var="title.offer"}</h2>
+            {/if}
 
             <table>
                 <tbody>

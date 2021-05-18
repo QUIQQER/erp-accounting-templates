@@ -216,6 +216,11 @@
             <de><![CDATA[Angebot]]></de>
             <en><![CDATA[Offer]]></en>
         </locale>
+        <locale name="title.offer_draft">
+            <de><![CDATA[Angebot (Entwurf)]]></de>
+            <en><![CDATA[Offer (draft)]]></en>
+        </locale>
+
         <locale name="offer.body.id">
             <de><![CDATA[Angebots-Nr.]]></de>
             <en><![CDATA[Offer no.]]></en>
@@ -466,6 +471,10 @@
         <locale name="SalesOrder.title">
             <de><![CDATA[Auftragsbestätigung]]></de>
             <en><![CDATA[Sales order confirmation]]></en>
+        </locale>
+        <locale name="SalesOrder.title_draft">
+            <de><![CDATA[Auftragsbestätigung (Entwurf)]]></de>
+            <en><![CDATA[Sales order confirmation (draft)]]></en>
         </locale>
         <locale name="SalesOrder.body.order_date">
             <de><![CDATA[Bestellt am]]></de>
