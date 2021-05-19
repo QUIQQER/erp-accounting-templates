@@ -160,6 +160,10 @@
             <de><![CDATA[Rechnung]]></de>
             <en><![CDATA[Invoice]]></en>
         </locale>
+        <locale name="title.invoice_draft">
+            <de><![CDATA[Rechnung (Entwurf)]]></de>
+            <en><![CDATA[Invoice (draft)]]></en>
+        </locale>
         <locale name="title.creditNote">
             <de><![CDATA[Gutschrift]]></de>
             <en><![CDATA[Self-billing]]></en>

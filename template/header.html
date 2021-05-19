@@ -20,7 +20,11 @@
 
     <div class="invoice-data">
         <div class="invoice-data-highlight">
-            <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice"}</h2>
+            {if method_exists($this, 'isDraft') && $this->isDraft()}
+                <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice_draft"}</h2>
+            {else}
+                <h2>{locale group="quiqqer/erp-accounting-templates" var="title.invoice"}</h2>
+            {/if}
             <table>
                 <tbody>
                 <tr>
