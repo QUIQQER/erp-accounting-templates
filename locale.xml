@@ -166,7 +166,7 @@
         </locale>
         <locale name="title.creditNote">
             <de><![CDATA[Gutschrift]]></de>
-            <en><![CDATA[Self-billing]]></en>
+            <en><![CDATA[Credit note]]></en>
         </locale>
         <locale name="title.canceled">
             <de><![CDATA[Stornorechnung]]></de>
