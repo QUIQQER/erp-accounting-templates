@@ -218,6 +218,12 @@
     text-align: right;
 }
 
+.articles-sum-exchange-rate {
+    float: left;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
 .articles-sum-container {
     display: inline-block;
     width: 100%;
