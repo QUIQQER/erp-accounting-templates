@@ -5,7 +5,7 @@
 <div class="invoice-header invoice-header-top">
     <div class="invoice-header-image">
         {assign var=Logo value=\QUI\ERP\Defaults::getLogo()}
-        {image image=$Logo height="120" svgtopng=1 host=1}
+        <img src="{image image=$Logo svgtopng=1 onlysrc=1 rewritten=1 host=1}"style="height: 120px;"/>
     </div>
 
     <div class="invoice-body-header-text">
